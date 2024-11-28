@@ -5,6 +5,7 @@
 # ---------------------
 
 import json # Mahdollistaa json-muunnokset
+from cryptography import fernet
 
 # Tiedoston käsittely: avaaminen ja sulkeminen
 """
@@ -56,3 +57,21 @@ with open('asetukset.json','wt') as settingsFile:
     settingsFile.write(asetuksetJson)
     print("Asetukset tallennettu")
 """ 
+# Luodaan oikean mittainen salausavain
+chipherKey = fernet.Fernet.generate_key()
+
+# Määritellään salaualgoritmi käyttämään luotua avainta
+chipher = fernet.Fernet(chipherKey)
+
+# Määritellään teksti tavuiksi (8 bit)
+plainPassword = b"Q2werty7"
+
+# Suoritetaan salaus
+encryptedPassword = chipher.encrypt(plainPassword)
+
+print("Salatussa muodossa:", encryptedPassword)
+
+# Puretaan salaus
+decryptedPassword = chipher.decrypt(encryptedPassword)
+
+print("Salau purettuna salasana on", decryptedPassword)
