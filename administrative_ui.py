@@ -35,7 +35,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
-        self.tabWidget.setGeometry(QRect(0, 0, 783, 551))
+        self.tabWidget.setGeometry(QRect(0, 10, 783, 551))
         self.tabWidget.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.studentTab = QWidget()
         self.studentTab.setObjectName(u"studentTab")
@@ -62,13 +62,13 @@ class Ui_MainWindow(object):
         self.savePersonPushButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.savePersonPushButton.setStyleSheet(u"background-color: rgb(57, 136, 220);\n"
 "color: rgb(255, 255, 255);")
-        self.widget = QWidget(self.studentTab)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(130, 10, 171, 146))
-        self.studentInputsVerticalLayout = QVBoxLayout(self.widget)
+        self.layoutWidget = QWidget(self.studentTab)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(130, 10, 171, 146))
+        self.studentInputsVerticalLayout = QVBoxLayout(self.layoutWidget)
         self.studentInputsVerticalLayout.setObjectName(u"studentInputsVerticalLayout")
         self.studentInputsVerticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.ssnLineEdit = QLineEdit(self.widget)
+        self.ssnLineEdit = QLineEdit(self.layoutWidget)
         self.ssnLineEdit.setObjectName(u"ssnLineEdit")
         font1 = QFont()
         font1.setPointSize(11)
@@ -76,37 +76,37 @@ class Ui_MainWindow(object):
 
         self.studentInputsVerticalLayout.addWidget(self.ssnLineEdit)
 
-        self.firstNameLineEdit = QLineEdit(self.widget)
+        self.firstNameLineEdit = QLineEdit(self.layoutWidget)
         self.firstNameLineEdit.setObjectName(u"firstNameLineEdit")
         self.firstNameLineEdit.setFont(font1)
 
         self.studentInputsVerticalLayout.addWidget(self.firstNameLineEdit)
 
-        self.lastNameLineEdit = QLineEdit(self.widget)
+        self.lastNameLineEdit = QLineEdit(self.layoutWidget)
         self.lastNameLineEdit.setObjectName(u"lastNameLineEdit")
         self.lastNameLineEdit.setFont(font1)
 
         self.studentInputsVerticalLayout.addWidget(self.lastNameLineEdit)
 
-        self.groupComboBox = QComboBox(self.widget)
+        self.groupComboBox = QComboBox(self.layoutWidget)
         self.groupComboBox.setObjectName(u"groupComboBox")
         self.groupComboBox.setFont(font1)
 
         self.studentInputsVerticalLayout.addWidget(self.groupComboBox)
 
-        self.vehicleClassLineEdit = QLineEdit(self.widget)
+        self.vehicleClassLineEdit = QLineEdit(self.layoutWidget)
         self.vehicleClassLineEdit.setObjectName(u"vehicleClassLineEdit")
         self.vehicleClassLineEdit.setFont(font1)
 
         self.studentInputsVerticalLayout.addWidget(self.vehicleClassLineEdit)
 
-        self.widget1 = QWidget(self.studentTab)
-        self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(20, 10, 101, 141))
-        self.studentLabelsVerticalLayout = QVBoxLayout(self.widget1)
+        self.layoutWidget1 = QWidget(self.studentTab)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(20, 10, 101, 141))
+        self.studentLabelsVerticalLayout = QVBoxLayout(self.layoutWidget1)
         self.studentLabelsVerticalLayout.setObjectName(u"studentLabelsVerticalLayout")
         self.studentLabelsVerticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.ssnLabel = QLabel(self.widget1)
+        self.ssnLabel = QLabel(self.layoutWidget1)
         self.ssnLabel.setObjectName(u"ssnLabel")
         font2 = QFont()
         font2.setPointSize(10)
@@ -114,25 +114,25 @@ class Ui_MainWindow(object):
 
         self.studentLabelsVerticalLayout.addWidget(self.ssnLabel)
 
-        self.firstNameLabel = QLabel(self.widget1)
+        self.firstNameLabel = QLabel(self.layoutWidget1)
         self.firstNameLabel.setObjectName(u"firstNameLabel")
         self.firstNameLabel.setFont(font2)
 
         self.studentLabelsVerticalLayout.addWidget(self.firstNameLabel)
 
-        self.lastNameLabel = QLabel(self.widget1)
+        self.lastNameLabel = QLabel(self.layoutWidget1)
         self.lastNameLabel.setObjectName(u"lastNameLabel")
         self.lastNameLabel.setFont(font2)
 
         self.studentLabelsVerticalLayout.addWidget(self.lastNameLabel)
 
-        self.groupLabel = QLabel(self.widget1)
+        self.groupLabel = QLabel(self.layoutWidget1)
         self.groupLabel.setObjectName(u"groupLabel")
         self.groupLabel.setFont(font2)
 
         self.studentLabelsVerticalLayout.addWidget(self.groupLabel)
 
-        self.vehicleClassLabel = QLabel(self.widget1)
+        self.vehicleClassLabel = QLabel(self.layoutWidget1)
         self.vehicleClassLabel.setObjectName(u"vehicleClassLabel")
         self.vehicleClassLabel.setFont(font2)
 
@@ -142,37 +142,37 @@ class Ui_MainWindow(object):
         self.vehicleTab = QWidget()
         self.vehicleTab.setObjectName(u"vehicleTab")
         self.vehicleTab.setCursor(QCursor(Qt.CursorShape.ArrowCursor))
-        self.layoutWidget = QWidget(self.vehicleTab)
-        self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(10, 0, 101, 141))
-        self.vehicleLabelsVerticalLayout = QVBoxLayout(self.layoutWidget)
+        self.layoutWidget2 = QWidget(self.vehicleTab)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(10, 0, 101, 141))
+        self.vehicleLabelsVerticalLayout = QVBoxLayout(self.layoutWidget2)
         self.vehicleLabelsVerticalLayout.setObjectName(u"vehicleLabelsVerticalLayout")
         self.vehicleLabelsVerticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.numberPlateLabel = QLabel(self.layoutWidget)
+        self.numberPlateLabel = QLabel(self.layoutWidget2)
         self.numberPlateLabel.setObjectName(u"numberPlateLabel")
         self.numberPlateLabel.setFont(font2)
 
         self.vehicleLabelsVerticalLayout.addWidget(self.numberPlateLabel)
 
-        self.manufacturerLabel = QLabel(self.layoutWidget)
+        self.manufacturerLabel = QLabel(self.layoutWidget2)
         self.manufacturerLabel.setObjectName(u"manufacturerLabel")
         self.manufacturerLabel.setFont(font2)
 
         self.vehicleLabelsVerticalLayout.addWidget(self.manufacturerLabel)
 
-        self.modelLabel = QLabel(self.layoutWidget)
+        self.modelLabel = QLabel(self.layoutWidget2)
         self.modelLabel.setObjectName(u"modelLabel")
         self.modelLabel.setFont(font2)
 
         self.vehicleLabelsVerticalLayout.addWidget(self.modelLabel)
 
-        self.modelYearLabel = QLabel(self.layoutWidget)
+        self.modelYearLabel = QLabel(self.layoutWidget2)
         self.modelYearLabel.setObjectName(u"modelYearLabel")
         self.modelYearLabel.setFont(font2)
 
         self.vehicleLabelsVerticalLayout.addWidget(self.modelYearLabel)
 
-        self.capacityLabel = QLabel(self.layoutWidget)
+        self.capacityLabel = QLabel(self.layoutWidget2)
         self.capacityLabel.setObjectName(u"capacityLabel")
         self.capacityLabel.setFont(font2)
 
@@ -242,6 +242,60 @@ class Ui_MainWindow(object):
         self.vehicleListLabel.setObjectName(u"vehicleListLabel")
         self.vehicleListLabel.setGeometry(QRect(10, 170, 101, 16))
         self.tabWidget.addTab(self.vehicleTab, "")
+        self.tab = QWidget()
+        self.tab.setObjectName(u"tab")
+        self.pushButton = QPushButton(self.tab)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(330, 70, 75, 23))
+        self.tableWidget_2 = QTableWidget(self.tab)
+        if (self.tableWidget_2.columnCount() < 2):
+            self.tableWidget_2.setColumnCount(2)
+        if (self.tableWidget_2.rowCount() < 10):
+            self.tableWidget_2.setRowCount(10)
+        self.tableWidget_2.setObjectName(u"tableWidget_2")
+        self.tableWidget_2.setGeometry(QRect(10, 150, 381, 181))
+        self.tableWidget_2.setRowCount(10)
+        self.tableWidget_2.setColumnCount(2)
+        self.label_3 = QLabel(self.tab)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(20, 120, 111, 21))
+        self.widget = QWidget(self.tab)
+        self.widget.setObjectName(u"widget")
+        self.widget.setGeometry(QRect(130, 30, 169, 56))
+        self.verticalLayout = QVBoxLayout(self.widget)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.lineEdit = QLineEdit(self.widget)
+        self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setFont(font1)
+
+        self.verticalLayout.addWidget(self.lineEdit)
+
+        self.lineEdit_2 = QLineEdit(self.widget)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+        self.lineEdit_2.setFont(font1)
+
+        self.verticalLayout.addWidget(self.lineEdit_2)
+
+        self.widget1 = QWidget(self.tab)
+        self.widget1.setObjectName(u"widget1")
+        self.widget1.setGeometry(QRect(10, 30, 101, 51))
+        self.verticalLayout_2 = QVBoxLayout(self.widget1)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.label = QLabel(self.widget1)
+        self.label.setObjectName(u"label")
+        self.label.setFont(font2)
+
+        self.verticalLayout_2.addWidget(self.label)
+
+        self.label_2 = QLabel(self.widget1)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setFont(font2)
+
+        self.verticalLayout_2.addWidget(self.label_2)
+
+        self.tabWidget.addTab(self.tab, "")
         self.reportsTab = QWidget()
         self.reportsTab.setObjectName(u"reportsTab")
         self.reportsTab.setCursor(QCursor(Qt.CursorShape.ArrowCursor))
@@ -311,7 +365,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -338,9 +392,16 @@ class Ui_MainWindow(object):
         self.printBarcodePushButton.setText(QCoreApplication.translate("MainWindow", u"Viivakoodi", None))
         self.vehicleListLabel.setText(QCoreApplication.translate("MainWindow", u"Autoluettelo", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.vehicleTab), QCoreApplication.translate("MainWindow", u"Autot", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Tallenna", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"Talennetut ryhm\u00e4t", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Ryhm\u00e4n nimi", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Vastuuhenkil\u00f6", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Ryhm\u00e4t", None))
         self.reportTypeLabel.setText(QCoreApplication.translate("MainWindow", u"Raportti", None))
+        self.beginingDateEdit.setDisplayFormat(QCoreApplication.translate("MainWindow", u"dd.MM.yyyy", None))
         self.beginingLabel.setText(QCoreApplication.translate("MainWindow", u"Alkaa", None))
         self.endingLabel.setText(QCoreApplication.translate("MainWindow", u"P\u00e4\u00e4ttyy", None))
+        self.endingDateEdit.setDisplayFormat(QCoreApplication.translate("MainWindow", u"dd.MM.yyyy", None))
         self.printReportPushButton.setText(QCoreApplication.translate("MainWindow", u"Tulosta", None))
         self.previewLabel.setText(QCoreApplication.translate("MainWindow", u"Esikatselu", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.reportsTab), QCoreApplication.translate("MainWindow", u"Raportit", None))
