@@ -86,7 +86,6 @@ class SaveSettingsDialog(QtWidgets.QDialog, Ui_Dialog):
         self.currentSettings = {}
 
         # Tarkistetaan ensin, että asetustiedosto on olemassa
-        # TODO: Yksinkertaista asetusten luku
         try:
             with open('settings.json', 'rt') as settingsFile:
                 jsonData = settingsFile.read()
@@ -135,6 +134,7 @@ class SaveSettingsDialog(QtWidgets.QDialog, Ui_Dialog):
         }
 
         # Muunnetaan sanakirja JSON-muotoon
+        # TODO: 
         jsonData = json.dumps(settingsDictionary)
         
         # Avataan asetustiedosto ja kirjoitetaan asetukset

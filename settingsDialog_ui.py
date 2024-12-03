@@ -142,3 +142,4 @@ class Ui_Dialog(object):
         self.userLabel.setText(QCoreApplication.translate("Dialog", u"K\u00e4ytt\u00e4j\u00e4tunnus", None))
         self.passwordLabel.setText(QCoreApplication.translate("Dialog", u"Salasana", None))
     # retranslateUi
+
