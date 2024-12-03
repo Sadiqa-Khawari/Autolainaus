@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>10</y>
+      <y>0</y>
       <width>783</width>
       <height>551</height>
      </rect>
@@ -109,7 +109,7 @@ color: rgb(255, 255, 255);</string>
        <string>Tallenna</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -166,7 +166,7 @@ color: rgb(255, 255, 255);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -482,11 +482,21 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>330</x>
-        <y>70</y>
-        <width>75</width>
+        <x>300</x>
+        <y>50</y>
+        <width>81</width>
         <height>23</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(57, 136, 220);
+color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Tallenna</string>
@@ -495,11 +505,16 @@ color: rgb(255, 255, 255);</string>
      <widget class="QTableWidget" name="tableWidget_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>150</y>
-        <width>381</width>
-        <height>181</height>
+        <x>30</x>
+        <y>120</y>
+        <width>351</width>
+        <height>192</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
       </property>
       <property name="rowCount">
        <number>10</number>
@@ -523,21 +538,21 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>120</y>
-        <width>111</width>
-        <height>21</height>
+        <x>30</x>
+        <y>100</y>
+        <width>101</width>
+        <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Talennetut ryhmät</string>
+       <string>Tallennetut ryhmät</string>
       </property>
      </widget>
      <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>30</y>
+        <x>120</x>
+        <y>20</y>
         <width>169</width>
         <height>56</height>
        </rect>
@@ -566,9 +581,9 @@ color: rgb(255, 255, 255);</string>
      <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>101</width>
+        <x>30</x>
+        <y>20</y>
+        <width>84</width>
         <height>51</height>
        </rect>
       </property>
@@ -654,9 +669,6 @@ color: rgb(255, 255, 255);</string>
         <pointsize>11</pointsize>
        </font>
       </property>
-      <property name="displayFormat">
-       <string>dd.MM.yyyy</string>
-      </property>
       <property name="calendarPopup">
        <bool>true</bool>
       </property>
@@ -717,9 +729,6 @@ color: rgb(255, 255, 255);</string>
        <font>
         <pointsize>11</pointsize>
        </font>
-      </property>
-      <property name="displayFormat">
-       <string>dd.MM.yyyy</string>
       </property>
       <property name="calendarPopup">
        <bool>true</bool>
