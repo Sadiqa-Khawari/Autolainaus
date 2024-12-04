@@ -30,6 +30,7 @@ class Ui_Dialog(object):
         font.setPointSize(8)
         font.setBold(True)
         self.saveSettingspushButton.setFont(font)
+        self.saveSettingspushButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.saveSettingspushButton.setStyleSheet(u"background-color: rgb(57, 136, 220);\n"
 "color: rgb(255, 255, 255);")
         self.layoutWidget = QWidget(Dialog)
@@ -142,4 +143,3 @@ class Ui_Dialog(object):
         self.userLabel.setText(QCoreApplication.translate("Dialog", u"K\u00e4ytt\u00e4j\u00e4tunnus", None))
         self.passwordLabel.setText(QCoreApplication.translate("Dialog", u"Salasana", None))
     # retranslateUi
-
