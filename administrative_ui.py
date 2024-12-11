@@ -26,7 +26,9 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 568)
+        MainWindow.resize(669, 701)
+        icon = QIcon(QIcon.fromTheme(u"preferences-desktop-accessibility"))
+        MainWindow.setWindowIcon(icon)
         self.actionMuokkaa = QAction(MainWindow)
         self.actionMuokkaa.setObjectName(u"actionMuokkaa")
         self.actionTietoja_ohjelmasta = QAction(MainWindow)
@@ -55,7 +57,7 @@ class Ui_MainWindow(object):
         self.registeredPersonsLabel.setGeometry(QRect(20, 180, 131, 16))
         self.savePersonPushButton = QPushButton(self.studentTab)
         self.savePersonPushButton.setObjectName(u"savePersonPushButton")
-        self.savePersonPushButton.setGeometry(QRect(310, 130, 71, 23))
+        self.savePersonPushButton.setGeometry(QRect(320, 140, 71, 23))
         font = QFont()
         font.setBold(True)
         self.savePersonPushButton.setFont(font)
@@ -64,7 +66,7 @@ class Ui_MainWindow(object):
 "color: rgb(255, 255, 255);")
         self.layoutWidget = QWidget(self.studentTab)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(130, 10, 171, 146))
+        self.layoutWidget.setGeometry(QRect(130, 10, 171, 156))
         self.studentInputsVerticalLayout = QVBoxLayout(self.layoutWidget)
         self.studentInputsVerticalLayout.setObjectName(u"studentInputsVerticalLayout")
         self.studentInputsVerticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -102,7 +104,7 @@ class Ui_MainWindow(object):
 
         self.layoutWidget1 = QWidget(self.studentTab)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(20, 10, 101, 141))
+        self.layoutWidget1.setGeometry(QRect(20, 10, 101, 151))
         self.studentLabelsVerticalLayout = QVBoxLayout(self.layoutWidget1)
         self.studentLabelsVerticalLayout.setObjectName(u"studentLabelsVerticalLayout")
         self.studentLabelsVerticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -180,7 +182,7 @@ class Ui_MainWindow(object):
 
         self.layoutWidget_2 = QWidget(self.vehicleTab)
         self.layoutWidget_2.setObjectName(u"layoutWidget_2")
-        self.layoutWidget_2.setGeometry(QRect(120, 0, 169, 146))
+        self.layoutWidget_2.setGeometry(QRect(120, 0, 169, 156))
         self.vehicleInputsVerticalLayout = QVBoxLayout(self.layoutWidget_2)
         self.vehicleInputsVerticalLayout.setObjectName(u"vehicleInputsVerticalLayout")
         self.vehicleInputsVerticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -262,7 +264,7 @@ class Ui_MainWindow(object):
         self.label_3.setGeometry(QRect(20, 120, 111, 21))
         self.layoutWidget3 = QWidget(self.tab)
         self.layoutWidget3.setObjectName(u"layoutWidget3")
-        self.layoutWidget3.setGeometry(QRect(130, 30, 169, 56))
+        self.layoutWidget3.setGeometry(QRect(130, 30, 169, 60))
         self.verticalLayout = QVBoxLayout(self.layoutWidget3)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -352,7 +354,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 800, 21))
+        self.menubar.setGeometry(QRect(0, 0, 669, 33))
         self.menuAsetukset = QMenu(self.menubar)
         self.menuAsetukset.setObjectName(u"menuAsetukset")
         MainWindow.setMenuBar(self.menubar)
@@ -366,7 +368,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
