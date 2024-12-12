@@ -10,6 +10,7 @@ import sys # Käynnistysargumentit
 import json # JSON-objektien ja tiedostojen käsittely
 
 # Asennuksen vaativat kirjastot
+import dbOperations # PostgreSQL-tietokantayhteydet
 from PySide6 import QtWidgets # Qt-vimpaimet
 
 
@@ -19,8 +20,7 @@ from settingsDialog_ui import Ui_Dialog as Settings_Dialog# Asetukset-dialogin l
 from aboutDialog_ui import Ui_Dialog as About_Dialog
 
 # Omat moduulit
-import cipher # Salaus
-import dbOperations # PostgreSQL-tietokantayhteydet
+import cipher
 
 # LUOKKAMÄÄRITYKSET
 # -----------------
@@ -49,9 +49,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
                 self.currentSettings = json.loads(jsonData)
 
             # Huom! Salasana pitää tallentaa JSON-tiedostoon tavallisena merkkijonona,
-            # ei byte string muodossa. Fernet-salauskirjastossa avain on aina tavumuodossa.
-            # Salausta varten merkkijono on muutettava aina tavumuotoon. Salattu teksti 
-            # voidaan tallentaa merkkijononona ja salakirjoitus purkaa suoraan merkkijonosta!         
+            # ei byte string muodossa. Salauskirjaston decode ja encode metodit hoitavat asian
+            
+            
             
         except Exception as e:
             
@@ -64,13 +64,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Valikkotoiminnot
         self.ui.actionMuokkaa.triggered.connect(self.openSettingsDialog)
         self.ui.actionTietoja_ohjelmasta.triggered.connect(self.openAboutDialog)
-        
+
         # Painikkeet
         self.ui.saveGroupPushButton.clicked.connect(self.saveGroup)
         
+
+        
    
-
-
    
     # OHJELMOIDUT SLOTIT
     # ==================
@@ -94,34 +94,35 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.aboutDialog.exec() # Luodaan dialogille event loop
 
     # Painikkeiden slotit
-    # -------------------
+    # -----------------
 
-    # R
+    # Ryhmän tallennus
     def saveGroup(self):
         # Määritellään tietokanta-asetukset
         dbSettings = self.currentSettings
-        plainTextPassword = cipher.decryptString(dbSettings["password"])
-        dbSettings["password"] = plainTextPassword
-        print("Tietokanta asetukset ovat: ", dbSettings)
+        plainTextPassword = cipher.decryptString(dbSettings['password'])
+        dbSettings['password'] = plainTextPassword
+        print('Tietokanta asetukset ovat:', dbSettings)
 
         # Määritellään tallennusmetodin vaatimat parametrit
-        tableName = "ryhma"
+        tableName = 'ryhma'
         group = self.ui.groupNameLineEdit.text()
-        respansiblePerson = self.ui.responsiblePLineEdit.text()
-        groupDictionary = {"ryhma": group,
-                          "vastuuhenkilo": respansiblePerson}
+        responsiblePerson = self.ui.responsiblePLineEdit.text()
+        groupDictionary = {'ryhma': group,
+                          'vastuuhenkilo': responsiblePerson }
         
+        # Luodaan tietokantayhteys-olio
         dbConnection = dbOperations.DbConnection(dbSettings)
 
         # Kutsutaan tallennusmetodia
         try:
             dbConnection.addToTable(tableName, groupDictionary)
         except Exception as e:
-            print("Virheilmoitus", str(e))
+            print('Virheilmoitus', str(e))
             self.openWarning()
         
 
-    # Virheilmoitukset ja muut Message Box -gialogit
+    # Virheilmoitukset ja muut Message Box -dialogit
     # ----------------------------------------------
 
     # Malli mahdollista virheilmoitusta varten
@@ -161,7 +162,7 @@ class SaveSettingsDialog(QtWidgets.QDialog, Settings_Dialog):
             self.ui.portLineEdit.setText(self.currentSettings['port'])
             self.ui.databaseLineEdit.setText(self.currentSettings['database'])
             self.ui.userLineEdit.setText(self.currentSettings['userName'])
-            plaintextPassword = cipher.decryptString(self.currentSettings("password"))
+            plaintextPassword = cipher.decryptString(self.currentSettings['password'])
             self.ui.paswordLineEdit.setText(plaintextPassword)
         except Exception as e:
             self.openInfo()
@@ -172,7 +173,7 @@ class SaveSettingsDialog(QtWidgets.QDialog, Settings_Dialog):
 
         # Kun Tallenna-painiketta on klikattu, kutsutaan saveToJsonFile-metodia
         self.ui.saveSettingspushButton.clicked.connect(self.saveToJsonFile)
-    
+
         # Suljepainikkeen toiminnot
         self.ui.closePushButton.clicked.connect(self.closeSettingsDialog)
     # OHJELMOIDUT SLOTIT (Luokan metodit)
@@ -186,9 +187,11 @@ class SaveSettingsDialog(QtWidgets.QDialog, Settings_Dialog):
         port = self.ui.portLineEdit.text()
         database = self.ui.databaseLineEdit.text()
         userName = self.ui.userLineEdit.text()
+
+        # Muutetaan merkkijono tavumuotoon (byte, merkistö UTF-8)
         plainTextPassword = self.ui.paswordLineEdit.text()
        
-        # Salataan ja muunnetaan tavalliseksi merkkijonoksi, jotta JSON-tiedoston luku onnistuu myöhemmin
+        # Salataan ja muunnetaan tavalliseksi merkkijonoksi, jotta JSON-tallennus onnistuu
         encryptedPassword = cipher.encryptString(plainTextPassword)
 
         # Muodostetaan muuttujista Python-sanakirja
@@ -211,10 +214,9 @@ class SaveSettingsDialog(QtWidgets.QDialog, Settings_Dialog):
         # Suljetaan dialogin ikkuna
         self.close()
 
-
     def closeSettingsDialog(self):
         self.close()
-        
+
     # Avataan MessageBox, jossa kerrotaan että tehdää uusi asetustiedosto
     def openInfo(self):
         msgBox = QtWidgets.QMessageBox()
