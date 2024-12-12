@@ -61,19 +61,25 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # OHJELMOIDUT SIGNAALIT
         # ---------------------
         
-        # Asetukset-valikon muokkaa toiminto avaa Asetukset-dialogi-ikkunan
+        # Valikkotoiminnot
         self.ui.actionMuokkaa.triggered.connect(self.openSettingsDialog)
         self.ui.actionTietoja_ohjelmasta.triggered.connect(self.openAboutDialog)
         
-
+        # Painikkeet
+        self.ui.saveGroupPushButton.clicked.connect(self.saveGroup)
         
    
+
+
    
     # OHJELMOIDUT SLOTIT
     # ==================
 
     # DIALOGIEN AVAUSMETODIT
     # ----------------------
+
+    # Valikkotoimintojen slotit
+    # -------------------------
 
     # Asetusdialogin avaus
     def openSettingsDialog(self):
@@ -86,6 +92,37 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.aboutDialog = AboutDialog()
         self.aboutDialog.setWindowTitle('Tietoja ohjelmasta')
         self.aboutDialog.exec() # Luodaan dialogille event loop
+
+    # Painikkeiden slotit
+    # -------------------
+
+    # R
+    def saveGroup(self):
+        # Määritellään tietokanta-asetukset
+        dbSettings = self.currentSettings
+        plainTextPassword = cipher.decryptString(dbSettings["password"])
+        dbSettings["password"] = plainTextPassword
+        print("Tietokanta asetukset ovat: ", dbSettings)
+
+        # Määritellään tallennusmetodin vaatimat parametrit
+        tableName = "ryhma"
+        group = self.ui.groupNameLineEdit.text()
+        respansiblePerson = self.ui.responsiblePLineEdit.text()
+        groupDictionary = {"ryhma": group,
+                          "vastuuhenkilo": respansiblePerson}
+        
+        dbConnection = dbOperations.DbConnection(dbSettings)
+
+        # Kutsutaan tallennusmetodia
+        try:
+            dbConnection.addToTable(tableName, groupDictionary)
+        except Exception as e:
+            print("Virheilmoitus", str(e))
+            self.openWarning()
+        
+
+    # Virheilmoitukset ja muut Message Box -gialogit
+    # ----------------------------------------------
 
     # Malli mahdollista virheilmoitusta varten
     def openWarning(self):

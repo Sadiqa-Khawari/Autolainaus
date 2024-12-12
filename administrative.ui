@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>669</width>
-    <height>701</height>
+    <width>697</width>
+    <height>645</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,7 +30,7 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="studentTab">
      <property name="cursor">
@@ -479,7 +479,7 @@ color: rgb(255, 255, 255);</string>
      <attribute name="title">
       <string>Ryhmät</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="saveGroupPushButton">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -495,12 +495,12 @@ color: rgb(255, 255, 255);</string>
        <string>Tallenna</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="grouptableWidget_2">
+     <widget class="QTableWidget" name="saveGroupsTableWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>150</y>
-        <width>381</width>
+        <width>391</width>
         <height>181</height>
        </rect>
       </property>
@@ -523,7 +523,7 @@ color: rgb(255, 255, 255);</string>
       <column/>
       <column/>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="saveGroupLabel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -547,7 +547,7 @@ color: rgb(255, 255, 255);</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="groupNameLineEdit">
          <property name="font">
           <font>
            <pointsize>11</pointsize>
@@ -556,7 +556,7 @@ color: rgb(255, 255, 255);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_2">
+        <widget class="QLineEdit" name="responsiblePLineEdit">
          <property name="font">
           <font>
            <pointsize>11</pointsize>
@@ -572,7 +572,7 @@ color: rgb(255, 255, 255);</string>
         <x>10</x>
         <y>30</y>
         <width>101</width>
-        <height>51</height>
+        <height>61</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -589,7 +589,7 @@ color: rgb(255, 255, 255);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="responsiblePersonLabel">
+        <widget class="QLabel" name="responsiblePLabel">
          <property name="font">
           <font>
            <pointsize>10</pointsize>
@@ -828,7 +828,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>669</width>
+     <width>697</width>
      <height>33</height>
     </rect>
    </property>
