@@ -31,19 +31,14 @@ class DbConnection():
         # Yhteysmerkkijono
         self.connectionString = f'dbname={self.databaseName}, user={self.userName}, password={self.password}, server={self.server}, port={self.port}'
         
-
-        print("Yhteysmerkkijono on :", self.connectionString)
     # Metodi tietojen lisäämiseen (INSERT)
-    def addToTable(self, table: str, data: dict) -> str:
+    def addToTable(self, table: str, data: dict) -> None:
         """Inserts a record (row) tothe a table according to a dictionary
         containing field names (columns) as keys and values
 
         Args:
             table (str): Name of the table
             data (dict): Field names and values
-
-        Returns:
-            str: Information about successfull operation or an error massage
         """
 
         # Muodostetaan lista sarakkeiden (kenttien) nimistä ja arvoista SQL laustetta varten
@@ -61,7 +56,7 @@ class DbConnection():
                 value = f"\"{rawValue}\"" # \" mahdollistaa puolilainausmerkkin lisäämisen
             else:
                 value = rawValue
-            values += value + ", " # Lisätään arvo sekä pilkku ja välily
+            values += value + ", " # Lisätään arvo sekä pilkku ja välilyönti
 
         # Poistetaan sarakkeista ja arvoista viimeinen pilkko ja välilyönti
         columns = columns[:-2]
@@ -80,27 +75,28 @@ class DbConnection():
            
 
             sqlClause = f"INSERT INTO {table} ({columns}) VALUES ({values})"
-            print("SQL-lause on: ", sqlClause)
-                        
+                                   
             # Suoritetaan SQL-lause 
             cursor.execute(sqlClause)
 
             # Vahvistetaan tapahtuma (transaction)
             currentConnection.commit()
 
+        # Jos tapahtuu virhe, välitetään
         except (Exception, psycopg2.Error) as e:
-            message = "Tietokantayhteyden muodostamisessa tapahtui virhe: " + str(e)
-            
+            raise e
         finally:
-            if message == "":
-                message = f"Tietua lisättiin tauluun {table}"
-
+            
             # Selvitetään muodostuiko yhteysolio
             if currentConnection:
                 cursor.close() # Tuhotaan kursori
                 currentConnection.close() # Tuotaan yhteys
+                
+# TODO: Tee metodi tietojen lukemisen
 
-            return message
+# TODO:Tee metodi tietojen muokkamiseen
+
+# TODO:Tee metodi tietojen poisamisen
         
 if __name__ == "__main__":
     
