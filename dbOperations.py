@@ -7,11 +7,7 @@
 # Ladattavat kirjastot
 import psycopg2
 
-# Sisäiset kirjastot
-import json
 
-# Omat moduulit
-import cipher
 
 
 # LUOKAT
@@ -62,8 +58,6 @@ class DbConnection():
         columns = columns[:-2]
         values = values[:-2]
 
-        # Määritellään tilaviestiksi tyhjä merkkijono
-        message = ''
 
         # Yritetään avata yhteys tietokantaan ja lisätä tietue
         try:
@@ -92,7 +86,7 @@ class DbConnection():
                 cursor.close() # Tuhotaan kursori
                 currentConnection.close() # Tuhotaan yhteys
                 
-    # TODO: Tee metodi tietojen lukemisen taulun kaiki sarakkeet
+    # Tee metodi tietojen lukemiseen, taulun kaikki sarakkeet
     def readAllColumnsFromTable(self, table: str) -> list | None:
         """Returns all columns and rows from a table
 
@@ -100,49 +94,51 @@ class DbConnection():
             table (str): Name of the table
 
         Returns:
-            list: List of tuples. One tuple contains a row 
+            list: List of tuples. One tuple contains a row
         """
         records = []
-        # Yritetään avata yhteys tietokantaan lisätä tietue
+        # Yritetään avata yhteys tietokantaan ja lisätä tietue
         try:
             # Luodaan yhteys tietokantaan
             currentConnection = psycopg2.connect(self.connectionString)
 
             # Luodaan kursori suorittamaan tietokantoperaatiota
             cursor = currentConnection.cursor()
-           
 
-            sqlClause = f"SELECT * FROM {table})"
-                                   
-            # Suoritetaan SQL-lause 
+            # Määritellään lopullinen SQL-lause
+            sqlClause = f'SELECT * FROM {table}'
+            
+            # Suoritetaan SQL-lause
             cursor.execute(sqlClause)
 
-            records = cursor.fetchall()
+            records= cursor.fetchall()
 
             return records
 
-        # Jos tapahtuu virhe, välitetään
+        # Jos tapahtuu virhe, välitetään se luokkaa käyttävälle ohjelmalle
         except (Exception, psycopg2.Error) as e:
-            raise e
+            raise e 
+        
         finally:
-            
+
             # Selvitetään muodostuiko yhteysolio
             if currentConnection:
                 cursor.close() # Tuhotaan kursori
-                currentConnection.close() # Tuotaan yhteys
+                currentConnection.close() # Tuhotaan yhteys
         
-    #  Tee metodi tietojen lukemisen taulun valitut sarakkeet
-    def readColumnsFromTable(self, table: str, columns: list) -> list:
-        """Returns all rows from a table. Columns are defind for the result set 
+    # Tee metodi tietojen lukemiseen, taulun valitut sarakkeet
+    def readColumsFromTable(self, table: str, columns: list) -> list:
+        """Returns all rows from a table. Columns are defined for the result set
 
         Args:
             table (str): Name of the table
             colums (list): Column names to include in the result set
 
         Returns:
-            list: List of tuples. One tuple contains a row 
+            list: List of tuples. One tuple contains a row
         """
-        # Yritetään avata yhteys tietokantaan lisätä tietue
+
+        # Yritetään avata yhteys tietokantaan ja lisätä tietue
         try:
             # Luodaan yhteys tietokantaan
             currentConnection = psycopg2.connect(self.connectionString)
@@ -151,62 +147,67 @@ class DbConnection():
             cursor = currentConnection.cursor()
 
             # Muodostetaan sarakelistasta merkkijono
-            columnString = ""
+            columnString = ''
             for column in columns:
-                columnString = columnString + str(column) + ", "
+                columnString = columnString + str(column) + ', '
                 
-            cleandedColumnString = columnString[:-2]
-           
+            cleanedColumnString = columnString[:-2] # Poistetaan lopusta pilkku ja välilyönti
+            
+            # Määritellään lopullinen SQL-lause
+            sqlClause = f'SELECT {cleanedColumnString} FROM {table}'
 
-            sqlClause = f"SELECT {cleandedColumnString} FROM {table})"
-
-
-         
+            # Suoritetaan SQL-lause ja luetaan tulokset kursorista
             cursor.execute(sqlClause)
-            records = cursor.fetchall()
+            records= cursor.fetchall()
             return records
 
-        # Jos tapahtuu virhe, välitetään
+        # Jos tapahtuu virhe, välitetään se luokkaa käyttävälle ohjelmalle
         except (Exception, psycopg2.Error) as e:
-            raise e
+            raise e 
         
         finally:
-            
+
             # Selvitetään muodostuiko yhteysolio
             if currentConnection:
                 cursor.close() # Tuhotaan kursori
-                currentConnection.close() # Tuotaan yhteys
+                currentConnection.close() # Tuhotaan yhteys
 
-    # TODO:Tee metodi tietojen muokkamiseen
-    def mname(self, table, clumn, criteriaClumn, criteriaValue):
+
+    # TODO: Tee metodi tietojen muokkaamiseen, yksittäinen sarake
+    def modifyTableData(self, table, column, criteriaColumn, criteriaValue):
         pass
 
-    # TODO:Tee metodi tietojen poisamisen
-    def deleterRawsFromTable(self, table, criteriaCloumn, criteriavalue):
+    # TODO: Tee metodi tietueen poistamiseen
+    def deleterRowsFromTable(self, table, criteriaColumn, criteriaValue):
         pass
         
 if __name__ == "__main__":
+
+    testDictionary = {'server': 'localhost',
+                      'port': '5432',
+                      'database': 'autolainaus',
+                      'userName': 'autolainaus',
+                      'password': 'Q2werty'}    
     
-    testDictionary ={"server": "localhost",
-                     "port": "5432",
-                     "database": "autolainaus",
-                     "userName": "autolainaus",
-                     "password": "Q2werty"}
-    
-    tableDictionary = {"Etunimi": "Uolevi",
-                       "Sukunimi": "Untamo"}
+    tableDictionary = {'etunimi': 'Uolevi',
+                       'sukunimi': 'Untamo'}
     
     
     dbConnection = DbConnection(testDictionary)
 
-    print("Yhteysmerkkijono on:", dbConnection.connectionString)
+    print('Yhteysmerkkijono on:', dbConnection.connectionString)
 
-    #dbConnection.addToTable("testitaulu", tableDictionary)
-    recordSet = dbConnection.readAllColumnsFromTable("ryhma")
-    print("Ryhmät ovat ", recordSet)
+    # dbConnection.addToTable('testitaulu', tableDictionary)
+    recordSet = dbConnection.readAllColumnsFromTable('ryhma')
+    print('Ryhmän tiedot ovat:', recordSet)
 
-    recordSet2 = dbConnection.readColumnsFromTable("ryhmat", ["ryhma", "vastahenkilo"])
-    print("Vastahenkilöt ovat ", )
+    recordSet2 = dbConnection.readColumsFromTable('ryhma', ['ryhma', 'vastuuhenkilo'])
+    print('Ryhmät ja vastuuhenkilöt ovat:', recordSet2)
+
+    recordSet3 = dbConnection.readColumsFromTable('ryhma',['vastuuhenkilo'])
+    print('Vastuuhenkilöitä ovat:', recordSet3)
+
     
-    recordSet3 = dbConnection.readColumnsFromTable("ryhma", ["vastuuhenkilo"])
-    print("Ryhmät ja vastuuhenkilöt ovat: ", recordSet3)
+    
+
+    
