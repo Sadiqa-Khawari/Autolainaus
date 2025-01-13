@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>782</width>
-    <height>836</height>
+    <width>756</width>
+    <height>826</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,7 @@
       <x>0</x>
       <y>0</y>
       <width>783</width>
-      <height>551</height>
+      <height>571</height>
      </rect>
     </property>
     <property name="font">
@@ -50,7 +50,7 @@
         <x>20</x>
         <y>240</y>
         <width>641</width>
-        <height>241</height>
+        <height>291</height>
        </rect>
       </property>
       <property name="cursor" stdset="0">
@@ -536,7 +536,7 @@ color: rgb(255, 255, 255);</string>
         <x>30</x>
         <y>120</y>
         <width>351</width>
-        <height>192</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -801,7 +801,7 @@ color: rgb(255, 255, 255);</string>
         <x>20</x>
         <y>160</y>
         <width>641</width>
-        <height>321</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="cursor" stdset="0">
@@ -863,7 +863,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>782</width>
+     <width>756</width>
      <height>33</height>
     </rect>
    </property>
