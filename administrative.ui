@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>756</width>
-    <height>826</height>
+    <width>800</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,7 @@
       <x>0</x>
       <y>0</y>
       <width>783</width>
-      <height>571</height>
+      <height>551</height>
      </rect>
     </property>
     <property name="font">
@@ -35,7 +35,7 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="lenderTab">
      <property name="cursor">
@@ -50,7 +50,7 @@
         <x>20</x>
         <y>240</y>
         <width>641</width>
-        <height>291</height>
+        <height>241</height>
        </rect>
       </property>
       <property name="cursor" stdset="0">
@@ -536,7 +536,7 @@ color: rgb(255, 255, 255);</string>
         <x>30</x>
         <y>120</y>
         <width>351</width>
-        <height>341</height>
+        <height>192</height>
        </rect>
       </property>
       <property name="font">
@@ -801,7 +801,7 @@ color: rgb(255, 255, 255);</string>
         <x>20</x>
         <y>160</y>
         <width>641</width>
-        <height>371</height>
+        <height>321</height>
        </rect>
       </property>
       <property name="cursor" stdset="0">
@@ -863,7 +863,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>756</width>
+     <width>800</width>
      <height>33</height>
     </rect>
    </property>
