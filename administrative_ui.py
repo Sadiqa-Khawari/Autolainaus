@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(756, 826)
+        MainWindow.resize(800, 585)
         icon = QIcon(QIcon.fromTheme(u"preferences-desktop-accessibility"))
         MainWindow.setWindowIcon(icon)
         self.actionMuokkaa = QAction(MainWindow)
@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.tabWidget = QTabWidget(self.centralwidget)
         self.tabWidget.setObjectName(u"tabWidget")
-        self.tabWidget.setGeometry(QRect(0, 0, 783, 571))
+        self.tabWidget.setGeometry(QRect(0, 0, 783, 551))
         font = QFont()
         font.setPointSize(10)
         self.tabWidget.setFont(font)
@@ -51,7 +51,7 @@ class Ui_MainWindow(object):
         if (self.registeredPersonsTableWidget.rowCount() < 10):
             self.registeredPersonsTableWidget.setRowCount(10)
         self.registeredPersonsTableWidget.setObjectName(u"registeredPersonsTableWidget")
-        self.registeredPersonsTableWidget.setGeometry(QRect(20, 240, 641, 291))
+        self.registeredPersonsTableWidget.setGeometry(QRect(20, 240, 641, 241))
         self.registeredPersonsTableWidget.viewport().setProperty(u"cursor", QCursor(Qt.CursorShape.ForbiddenCursor))
         self.registeredPersonsTableWidget.setRowCount(10)
         self.registeredPersonsTableWidget.setColumnCount(6)
@@ -271,7 +271,7 @@ class Ui_MainWindow(object):
         if (self.savedGroupsTableWidget.rowCount() < 10):
             self.savedGroupsTableWidget.setRowCount(10)
         self.savedGroupsTableWidget.setObjectName(u"savedGroupsTableWidget")
-        self.savedGroupsTableWidget.setGeometry(QRect(30, 120, 351, 341))
+        self.savedGroupsTableWidget.setGeometry(QRect(30, 120, 351, 192))
         self.savedGroupsTableWidget.setFont(font2)
         self.savedGroupsTableWidget.setRowCount(10)
         self.savedGroupsTableWidget.setColumnCount(2)
@@ -359,7 +359,7 @@ class Ui_MainWindow(object):
         if (self.tableWidget.rowCount() < 22):
             self.tableWidget.setRowCount(22)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(20, 160, 641, 371))
+        self.tableWidget.setGeometry(QRect(20, 160, 641, 321))
         self.tableWidget.viewport().setProperty(u"cursor", QCursor(Qt.CursorShape.ForbiddenCursor))
         self.tableWidget.setRowCount(22)
         self.tableWidget.setColumnCount(6)
@@ -370,7 +370,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 756, 33))
+        self.menubar.setGeometry(QRect(0, 0, 800, 33))
         self.menuAsetukset = QMenu(self.menubar)
         self.menuAsetukset.setObjectName(u"menuAsetukset")
         MainWindow.setMenuBar(self.menubar)
@@ -384,7 +384,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
