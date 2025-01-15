@@ -6,7 +6,7 @@ try:
     connection = psycopg2.connect(database="testi", user="user", password="salasana",host="localhost", port="5432")
     cursor = connection.cursor()
     cursor.execute("INSERT INTO testitaulu VALUES (Erkki, Esimekki) VALUES ('Jakke', 'Jäynä')")
-    connection.conmit()
+    connection.commit()
 except Exception as e:
     print(str(e))
 finally:
