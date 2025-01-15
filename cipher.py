@@ -1,4 +1,4 @@
-# MODUULI SALAUSAVAINTEN LUOMISEEN,FERNET-SALAUKSEEN JA SEN PURKAMISEEN
+# MODUULI SALAUAVAINTEN JA FERNET-SALAUKSEEN JA SEN PURKAMISEEN
 # =============================================================
 
 # KIRJASTOJEN JA MODUULIEN LATAUKSET
@@ -6,41 +6,41 @@
 
 from cryptography.fernet import Fernet
 
-def newKey() -> bytes: 
+def newKey() -> str: 
     """Creates a new key for encrypting and decrypting messages
 
     Returns:
-        bytes: a key in byte form
+        str: a key in byte form
     """
     key = Fernet.generate_key()
     return key
 
-def createChipher(key: bytes) -> object:
+def createChipher(key: str) -> object:
     """Creates a new chipher ie. encrypting machine
 
     Args:
-        key (bytes): A fernet generated key
+        key (str): A fernet generated key
 
     Returns:
-        object: The cipher object to use to encrypt or decrypt
+        object: The cipher objet to use to encrypt or decrypt
     """
     chipher = Fernet(key)
     return chipher
 
 def encrypt(chipher: object, plainText: bytes) -> bytes:
-    """Encrypts a message usinf Fernet algorithm
+    """Encrypts a message using Fernet algorithm
 
     Args:
         chipher (object): Fernet chiphering engine
-        plainText (str): Text to be encrypted
+        plainText (bytes): Text to be encrypted
 
     Returns:
-        str: encrypted text in byte format
+        bytes: encrypted text in byte format
     """
     cryptoText = chipher.encrypt(plainText)
     return cryptoText
 
-def decrypt(chipher: object, cryptoText: str | bytes, byteMode: bool=False) -> str | bytes:
+def decrypt(chipher: object, cryptoText: str, byteMode: bool=False) -> str:
     """Decrypts a message
 
     Args:
@@ -49,7 +49,7 @@ def decrypt(chipher: object, cryptoText: str | bytes, byteMode: bool=False) -> s
         byteMode (bool, optional): If return value will be in byte form. Defaults to False.
 
     Returns:
-        str | bytes: message in plain text
+        str: message in plain text
     """
     if byteMode == True:
         plaintext = chipher.decrypt(cryptoText)
@@ -68,11 +68,11 @@ def encryptString(plainText: str, key=b'8Zra5xvI3derJNwLCue1iDdw0lbZm_T0zXFaBknP
         str: Encrypted string
     """
     chipherEngine = createChipher(key) # Luodaan salausmoottori
-    byteForm = plainText.encode() # Muunnetaan tavumuotoon sisäänrakennetulla encode-metodilla
-    cryptoText = encrypt(chipherEngine, byteForm).decode() # Salataan ja muunnetaan salattu teksti merkkijonoksi decode-metodilla
+    byteForm = plainText.encode() # Käytetään tavukoodiksi muuntoon kirjaston encode-metodia
+    cryptoText = encrypt(chipherEngine, byteForm).decode() # Muunnetaan salattu teksti merkkijonoksi decode-metodilla
     return cryptoText
 
-def decryptString(cryptoText: str | bytes, key=b'8Zra5xvI3derJNwLCue1iDdw0lbZm_T0zXFaBknPXI4=') -> str:
+def decryptString(cryptoText: str, key=b'8Zra5xvI3derJNwLCue1iDdw0lbZm_T0zXFaBknPXI4=') -> str:
     """Decrypts a Fernet encrypted string to a plain text string
 
     Args:
@@ -90,8 +90,13 @@ def decryptString(cryptoText: str | bytes, key=b'8Zra5xvI3derJNwLCue1iDdw0lbZm_T
 
 if __name__ == "__main__":
 
-    selko = 'Hippopotamus'
+    key = b"-SsqnFWfgh2pX_nnnojiCXDH3LN91myhSd9SUt6S2HM="
+    selko = b"Selkokieliteksti"
+    sifferi = createChipher(key)
+    sala = encrypt(sifferi, selko)
+    print(sala)
+    """selko = 'Hippopotamus'
     sala = encryptString(selko)
     print('Salakirjoitettuna se on:', sala)
     purettu = decryptString(sala)
-    print('Purettuna se on:', purettu)
+    print('Purettuna se on:', purettu)"""
