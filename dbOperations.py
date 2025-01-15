@@ -7,9 +7,6 @@
 # Ladattavat kirjastot
 import psycopg2
 
-
-
-
 # LUOKAT
 # ------
 
