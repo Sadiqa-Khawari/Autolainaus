@@ -154,8 +154,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.registeredPersonsTableWidget.setHorizontalHeaderLabels(headerRow)
 
         # Asetetaan taulukon solujen arvot
-        for row in range(len(tableData)): # Luetaan listaa riveittäin
-            for column in range(len(tableData[row])): # Luetaan monikkoa sarakkeittain
+        if tableData is not None:
+            if tableData is not None:
+                if tableData is not None:
+                    for row in range(len(tableData)): # Luetaan listaa riveittäin
+                        for column in range(len(tableData[row])): # Luetaan monikkoa sarakkeittain
+                            
+                            # Muutetaan merkkijonoksi ja QTableWidgetItem-olioksi
+                            data = QtWidgets.QTableWidgetItem(str(tableData[row][column])) 
+                            self.ui.registeredPersonsTableWidget.setItem(row, column, data)
                 
                 # Muutetaan merkkijonoksi ja QTableWidgetItem-olioksi
                 data = QtWidgets.QTableWidgetItem(str(tableData[row][column])) 
@@ -182,12 +189,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.vehicleCatalogTableWidget.setHorizontalHeaderLabels(headerRow)
 
         # Asetetaan taulukon solujen arvot
-        for row in range(len(tableData)): # Luetaan listaa riveittäin
-            for column in range(len(tableData[row])): # Luetaan monikkoa sarakkeittain
-                
-                # Muutetaan merkkijonoksi ja QTableWidgetItem-olioksi
-                data = QtWidgets.QTableWidgetItem(str(tableData[row][column])) 
-                self.ui.vehicleCatalogTableWidget.setItem(row, column, data)
+        if tableData is not None:
+            for row in range(len(tableData)): # Luetaan listaa riveittäin
+                for column in range(len(tableData[row])): # Luetaan monikkoa sarakkeittain
+                    
+                    # Muutetaan merkkijonoksi ja QTableWidgetItem-olioksi
+                    data = QtWidgets.QTableWidgetItem(str(tableData[row][column])) 
+                    self.ui.vehicleCatalogTableWidget.setItem(row, column, data)
 
 
     # Ryhmät-taulukon päivitys
@@ -323,11 +331,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             text (str): Error message
         """
         msgBox = QtWidgets.QMessageBox()
-        msgBox.setIcon(QtWidgets.QMessageBox.Critical)
+        msgBox.setIcon(QtWidgets.QMessageBox.Icon.Critical)
         msgBox.setWindowTitle(title)
         msgBox.setText('Tapahtui vakava virhe')
         msgBox.setDetailedText(text)
-        msgBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msgBox.setStandardButtons(QtWidgets.QMessageBox.StandardButton.Ok)
         msgBox.exec()
 
 # Asetusten tallennusikkunan luokka
