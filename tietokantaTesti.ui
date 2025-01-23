@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1063</width>
+    <height>767</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,15 +23,23 @@
    <widget class="QLineEdit" name="firstNameLineEdit">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>113</width>
-      <height>22</height>
+      <x>122</x>
+      <y>390</y>
+      <width>161</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 127);
 color: rgb(32, 75, 70);</string>
+    </property>
+    <property name="text">
+     <string>Jonne Janttari</string>
     </property>
    </widget>
    <widget class="QLabel" name="firstNameLabel">
@@ -53,11 +61,26 @@ color: rgb(32, 75, 70);</string>
    <widget class="QLineEdit" name="lastNameLineEdit">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>20</y>
-      <width>113</width>
-      <height>22</height>
+      <x>470</x>
+      <y>390</y>
+      <width>141</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Serif</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 127);</string>
+    </property>
+    <property name="locale">
+     <locale language="Finnish" country="Finland"/>
+    </property>
+    <property name="text">
+     <string>AM-15</string>
     </property>
    </widget>
    <widget class="QLabel" name="lastNameLabel">
@@ -109,8 +132,8 @@ color: rgb(32, 75, 70);</string>
    <widget class="QLabel" name="studentPictureLabel">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>100</y>
+      <x>580</x>
+      <y>-10</y>
       <width>211</width>
       <height>231</height>
      </rect>
@@ -128,8 +151,8 @@ color: rgb(32, 75, 70);</string>
    <widget class="QLabel" name="keyPictureLabel">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>170</y>
+      <x>450</x>
+      <y>220</y>
       <width>201</width>
       <height>141</height>
      </rect>
@@ -144,11 +167,14 @@ color: rgb(32, 75, 70);</string>
    <widget class="QLabel" name="teacherPictureLabel">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>290</y>
+      <x>60</x>
+      <y>140</y>
       <width>211</width>
       <height>231</height>
      </rect>
+    </property>
+    <property name="locale">
+     <locale language="Finnish" country="Finland"/>
     </property>
     <property name="text">
      <string/>
@@ -160,13 +186,65 @@ color: rgb(32, 75, 70);</string>
      <bool>false</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>100</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>LAINA</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>440</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>15.3.2024</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>350</y>
+      <width>171</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="autoPicture.qrc">:/auto/auto.png</pixmap>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1063</width>
      <height>33</height>
     </rect>
    </property>
@@ -240,6 +318,9 @@ color: rgb(255, 255, 255);</string>
  </widget>
  <resources>
   <include location="testPictures.qrc"/>
+  <include location="autoPicture.qrc"/>
+  <include location="../../../.designer/backup/autoPicture.qrc"/>
+  <include location="../../../.designer/backup/testPictures.qrc"/>
  </resources>
  <connections/>
 </ui>

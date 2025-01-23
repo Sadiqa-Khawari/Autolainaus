@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="auto">
+    <file>auto.png</file>
+  </qresource>
+</RCC>
