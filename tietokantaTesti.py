@@ -81,14 +81,17 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.keyPictureLabel.show()
         self.ui.ssnLineEdit.show()
         self.ui.returnCarPushButton.hide() # Piilotetaan Palauta-painike
+        self.ui.ssnLineEdit.setFocus()
 
         # Näytetään tilarivillä Ohjeteksti
-        message = 'Lue ajokortin viivakoodi ensin ja sen jälkeen avaimen viivakoodi'
-        self.ui.statusbar.showMessage(message)
+        message = 'Lue ajokortin viivakoodi'
+        self.ui.statusbar.showMessage(message, 5000)
 
     def showKeyLineEdit(self):
         self.ui.keyBarcodeLineEdit.show()
         self.ui.keyBarcodeLineEdit.setFocus()
+        message = 'ota ajokortti pois lukijasta ja laita avaimenperä lukijaan. '
+        self.ui.statusbar.showMessage(message)
 
     # Avataan MessageBox
     def openWarning(self):
