@@ -173,8 +173,8 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 
    <widget class="QLabel" name="teacherPictureLabel">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>160</y>
+      <x>50</x>
+      <y>190</y>
       <width>211</width>
       <height>231</height>
      </rect>
@@ -183,7 +183,7 @@ background-color: qconicalgradient(cx:0, cy:0, angle:135, stop:0 rgba(255, 255, 
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Teacher.png</pixmap>
+     <pixmap resource="testPictures.qrc">:/png/Teacher.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>

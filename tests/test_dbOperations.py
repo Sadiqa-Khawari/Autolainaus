@@ -2,7 +2,7 @@
 # ============================
 
 import pytest # Virheilmoitusten testaus
-import dbOperations # Testattava moduuli
+from lendingModules import dbOperations # Testattava moduuli
 
 settigsDectionary = {"server": "localhost",
                      "port": "5433",

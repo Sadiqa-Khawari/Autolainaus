@@ -1,3 +1,5 @@
+"""A module to connect to a PostgreSQL datebase and do basict CRUD-operations (Create, Real, Update and Delete)
+"""
 # MODUULI POSTGRESQL TIETOKANTAPALVELIMEN KÄYTTÄMISEEN
 # ====================================================
 

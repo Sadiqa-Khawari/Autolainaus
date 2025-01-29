@@ -1,3 +1,4 @@
+"""A module to produce Code 128 barcodes. There """
 # MODUULI VIIVAKOODIEN TUOTTAMISEEN
 # =================================
 

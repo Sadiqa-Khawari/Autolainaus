@@ -9,9 +9,9 @@ import sys # Käynnistysargumentit
 
 from PySide6 import QtWidgets # Qt-vimpaimet
 
-# Mainwindow-ui:n tilalle käännetyn pääikkunan tiedoston nimi
-# ilman .p
-from mainWindow_ui import Ui_MainWindow # Käännetyn käyttöliittymän luokka
+# mainWindow_ui:n tilalle käännetyn pääikkunan tiedoston nimi
+# ilman .py-tiedostopäätettä
+from user_ui import Ui_MainWindow # Käännetyn käyttöliittymän luokka
 
 # Määritellään luokka, joka perii QMainWindow- ja Ui_MainWindow-luokan
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -27,17 +27,44 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Kutsutaan käyttöliittymän muodostusmetodia setupUi
         self.ui.setupUi(self)
 
+        
+        # Ohjelman käynnistyksessä piilotetaan tarpeettomat elementit
+        self.ui.calendarLabel.hide()
+        self.ui.clockLabel.hide()
+        self.ui.dateLabel.hide()
+        self.ui.goBackPushButton.hide()
+        self.ui.keyBarcodeLineEdit.hide()
+        self.ui.keyPictureLabel.hide()
+        self.ui.lenderPictureLabel.hide()
+        self.ui.soundOnPushButton.hide()
+        self.ui.ssnLineEdit.hide()
+        self.ui.keyBarcodeLineEdit.hide()
+        self.ui.statusLabel.hide()
+        self.ui.timeLabel.hide()
+
+
+
         # OHJELMOIDUT SIGNAALIT
         # ---------------------
         
         # Kun Tulosta-painiketta on klikattu, kutsutaan updatePrintedLabel-metodia
-        self.ui.tulostaPushButton.clicked.connect(self.updatePrintedLabel)
+        self.ui.takeCarPushButton.clicked.connect(self.activateLender)
 
         
    
    
     # OHJELMOIDUT SLOTIT
     # ------------------
+    def activateLender(self):
+        self.ui.statusLabel.setText('Auton lainaus')
+        self.ui.lenderPictureLabel.show()
+        self.ui.ssnLineEdit.show()
+        self.ui.goBackPushButton.show()
+        self.ui.ssnLineEdit.setFocus()
+        self.ui.returnCarPushButton.hide()
+        self.ui.takeCarPushButton.hide()
+        self.ui.statusLabel.show()
+        self.ui.statusbar.showMessage('Syötä ajokortti koneeseen')
 
     # Muutetaan tulostettuLabel:n sisältö: teksti ja väri
     def updatePrintedLabel(self):
@@ -54,14 +81,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         msgBox.exec()
 
 
-# Luodaan sovellus
+# LUODAAN VARSINAINEN SOVELLUS
+# ============================
 app = QtWidgets.QApplication(sys.argv)
 
 # Luodaan objekti pääikkunalle ja tehdään siitä näkyvä
 window = MainWindow()
 window.show()
 
-# Käynnistetään sovellus ja tapahtumienkäsittelijä
+# Käynnistetään sovellus ja tapahtumienkäsittelijä (event loop)
 app.exec()
 
     
