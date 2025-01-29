@@ -26,8 +26,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>330</y>
+      <x>50</x>
+      <y>340</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -116,7 +116,7 @@ background-color: rgb(140, 51, 85);</string>
      <string>LAINAA</string>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
+     <iconset>
       <normaloff>:/pictures/uiPictures/ota.png</normaloff>:/pictures/uiPictures/ota.png</iconset>
     </property>
     <property name="iconSize">
@@ -142,7 +142,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/keys.png</pixmap>
+     <pixmap>uiPicture/keys.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -154,8 +154,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>100</y>
+      <x>30</x>
+      <y>90</y>
       <width>211</width>
       <height>231</height>
      </rect>
@@ -167,7 +167,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/Teacher.png</pixmap>
+     <pixmap resource="userUiRescources.qrc">:/UiPicture/uiPicture/Teacher.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -180,7 +180,7 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>70</x>
-      <y>380</y>
+      <y>470</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -229,7 +229,7 @@ background-color: rgb(140, 51, 85);</string>
      <string>PALAUTA</string>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
+     <iconset>
       <normaloff>:/pictures/uiPictures/palauta.drawio.png</normaloff>:/pictures/uiPictures/palauta.drawio.png</iconset>
     </property>
     <property name="iconSize">
@@ -242,8 +242,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QLabel" name="calendarLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>370</y>
+      <x>20</x>
+      <y>480</y>
       <width>31</width>
       <height>51</height>
      </rect>
@@ -252,7 +252,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/calendar.png</pixmap>
+     <pixmap>uiPicture/calendar.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -264,8 +264,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>380</y>
+      <x>560</x>
+      <y>470</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -285,8 +285,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QLabel" name="clockLabel">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>380</y>
+      <x>510</x>
+      <y>470</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -295,7 +295,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/clock.png</pixmap>
+     <pixmap resource="userUiRescources.qrc">:/UiPicture/uiPicture/clock.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -324,7 +324,7 @@ color: rgb(255, 255, 255);</string>
      <string>Palaa takaisin</string>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
+     <iconset>
       <normaloff>:/pictures/uiPictures/back.png</normaloff>:/pictures/uiPictures/back.png</iconset>
     </property>
     <property name="iconSize">
@@ -350,7 +350,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
+     <iconset>
       <normaloff>:/pictures/uiPictures/soundOn.png</normaloff>:/pictures/uiPictures/soundOn.png</iconset>
     </property>
     <property name="iconSize">
@@ -376,7 +376,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
+     <iconset>
       <normaloff>:/pictures/uiPictures/soundOff.png</normaloff>:/pictures/uiPictures/soundOff.png</iconset>
     </property>
     <property name="iconSize">
@@ -386,29 +386,43 @@ color: rgb(255, 255, 255);</string>
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="statusLabel">
+   <widget class="QLabel" name="lendeNameLabel">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>10</y>
-      <width>441</width>
-      <height>91</height>
+      <x>60</x>
+      <y>380</y>
+      <width>151</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>36</pointsize>
-      <bold>true</bold>
+      <pointsize>16</pointsize>
      </font>
     </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
     <property name="text">
-     <string>Tila</string>
+     <string>Lainajan nimi</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="carlnfoLabel">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>380</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Merkki auto</string>
     </property>
    </widget>
   </widget>

@@ -41,6 +41,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.keyBarcodeLineEdit.hide()
         self.ui.statusLabel.hide()
         self.ui.timeLabel.hide()
+        self.ui.lenderPictureLabel.hide()
 
 
 
@@ -50,11 +51,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # Kun Tulosta-painiketta on klikattu, kutsutaan updatePrintedLabel-metodia
         self.ui.takeCarPushButton.clicked.connect(self.activateLender)
 
+        self.ui.ssnLineEdit.returnPressed.connect(self.activateKey)
+
         
    
    
     # OHJELMOIDUT SLOTIT
     # ------------------
+
+    # Näyttää lainaajan kuvakkeen ja henkilötunnuksen kentä
     def activateLender(self):
         self.ui.statusLabel.setText('Auton lainaus')
         self.ui.lenderPictureLabel.show()
@@ -66,10 +71,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.statusLabel.show()
         self.ui.statusbar.showMessage('Syötä ajokortti koneeseen')
 
-    # Muutetaan tulostettuLabel:n sisältö: teksti ja väri
-    def updatePrintedLabel(self):
-        self.ui.tulostettuLabel.setText('Tulostettu')
-        self.ui.tulostettuLabel.setStyleSheet(u"color: rgb(0, 255, 0);")
+    # 
+    def activateKey(self):
+        self.ui.keyPictureLabel.show()
+        self.ui.keyBarcodeLineEdit.show()
+        self.ui.keyBarcodeLineEdit.setFocus()
+        self.ui.lenderPictureLabel.show()
+
 
     # Avataan MessageBox
     def openWarning(self):

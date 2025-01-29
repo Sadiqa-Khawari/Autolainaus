@@ -1,9 +1,0 @@
-<RCC>
-  <qresource prefix="png">
-    <file>Tire.png</file>
-    <file>palautaPicture.png</file>
-    <file>Teacher.png</file>
-    <file>keys.png</file>
-    <file>student.png</file>
-  </qresource>
-</RCC>

@@ -180,7 +180,7 @@ class Code128B():
     
 
 if __name__ == "__main__":
-    testi = Code128B('128B')
+    testi = Code128B('XSE-778')
     try:
         tulos = testi.checkValidityOfText()
         print(testi.text, 'on kelvollinen viivakoodiksi', tulos)
