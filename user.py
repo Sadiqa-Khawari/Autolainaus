@@ -42,7 +42,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.ssnLineEdit.returnPressed.connect(self.activateKey)
         
         # Kun avaimenperä on luettu, kutsutaan setLendingData
-        self.ui.keyBarcodeLineEdit.returnPressed.connect(self.setLendingData)
+        self.ui.keyReturnBarcodeLineEdit.returnPressed.connect(self.setLendingData)
    
     # OHJELMOIDUT SLOTIT
     # ------------------
@@ -56,7 +56,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.clockLabel.hide()
         self.ui.dateLabel.hide()
         self.ui.goBackPushButton.hide()
-        self.ui.keyBarcodeLineEdit.hide()
+        self.ui.keyReturnBarcodeLineEdit.hide()
         self.ui.keyPictureLabel.hide()
         self.ui.lenderPictureLabel.hide()
         self.ui.soundOnPushButton.hide()
@@ -81,8 +81,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     # Näyttää avaimen kuvakkeen, rekisterikenttä ja lainaajan tiedot
     def activateKey(self):
         self.ui.keyPictureLabel.show()
-        self.ui.keyBarcodeLineEdit.show()
-        self.ui.keyBarcodeLineEdit.setFocus()
+        self.ui.keyReturnBarcodeLineEdit.show()
+        self.ui.keyReturnBarcodeLineEdit.setFocus()
         self.ui.lenderNameLabel.show()
 
     # Näyttää lainauksen loput tiedot

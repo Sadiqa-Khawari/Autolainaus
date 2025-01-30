@@ -54,7 +54,7 @@ color: rgb(32, 75, 70);</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="keyBarcodeLineEdit">
+   <widget class="QLineEdit" name="keyReturnBarcodeLineEdit">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -116,8 +116,8 @@ background-color: rgb(140, 51, 85);</string>
      <string>LAINAA</string>
     </property>
     <property name="icon">
-     <iconset resource="uiPicture/pictures.qrc">
-      <normaloff>:/uiPictures/ota.png</normaloff>:/uiPictures/ota.png</iconset>
+     <iconset resource="pictures.qrc">
+      <normaloff>:/picture/uiPictures/ota.png</normaloff>:/picture/uiPictures/ota.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -142,7 +142,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/keys.png</pixmap>
+     <pixmap resource="pictures.qrc">:/picture/uiPictures/keys.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -154,8 +154,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>90</y>
+      <x>10</x>
+      <y>100</y>
       <width>211</width>
       <height>231</height>
      </rect>
@@ -167,7 +167,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/Teacher.png</pixmap>
+     <pixmap resource="pictures.qrc">:/picture/uiPictures/Teacher.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -179,7 +179,7 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>80</x>
       <y>470</y>
       <width>191</width>
       <height>41</height>
@@ -229,8 +229,8 @@ background-color: rgb(140, 51, 85);</string>
      <string>PALAUTA</string>
     </property>
     <property name="icon">
-     <iconset resource="uiPicture/pictures.qrc">
-      <normaloff>:/uiPictures/palauta.drawio.png</normaloff>:/uiPictures/palauta.drawio.png</iconset>
+     <iconset resource="pictures.qrc">
+      <normaloff>:/picture/uiPictures/palauta.drawio.png</normaloff>:/picture/uiPictures/palauta.drawio.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -252,7 +252,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/calendar.png</pixmap>
+     <pixmap resource="pictures.qrc">:/picture/uiPictures/calendar.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -295,7 +295,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/clock.png</pixmap>
+     <pixmap resource="pictures.qrc">:/picture/uiPictures/clock.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -305,7 +305,7 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>300</x>
-      <y>450</y>
+      <y>480</y>
       <width>171</width>
       <height>91</height>
      </rect>
@@ -324,8 +324,8 @@ color: rgb(255, 255, 255);</string>
      <string>Palaa takaisin</string>
     </property>
     <property name="icon">
-     <iconset resource="uiPicture/pictures.qrc">
-      <normaloff>:/uiPictures/back.png</normaloff>:/uiPictures/back.png</iconset>
+     <iconset resource="pictures.qrc">
+      <normaloff>:/picture/uiPictures/back.png</normaloff>:/picture/uiPictures/back.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -376,8 +376,8 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="uiPicture/pictures.qrc">
-      <normaloff>:/uiPictures/soundOff.png</normaloff>:/uiPictures/soundOff.png</iconset>
+     <iconset resource="pictures.qrc">
+      <normaloff>:/picture/uiPictures/soundOff.png</normaloff>:/picture/uiPictures/soundOff.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -454,8 +454,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="okPushButton">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>350</y>
+      <x>580</x>
+      <y>190</y>
       <width>171</width>
       <height>91</height>
      </rect>
@@ -568,7 +568,7 @@ color: rgb(255, 255, 255);</string>
   </action>
  </widget>
  <resources>
-  <include location="uiPicture/pictures.qrc"/>
+  <include location="pictures.qrc"/>
  </resources>
  <connections/>
 </ui>
