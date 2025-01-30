@@ -1,0 +1,7 @@
+Lue ajokortti viivakoodi -> drivingLicence.wav
+Lue avaimenperän viivakoodi -> readKey.wav
+Paina OK tallentaaksesi tiedot -> saveDate.wav
+Auton lainaus onnistui -> lendingOk.wav
+Auto palautettu, lainaus päättynyt -> returunOk.wav
+Ajakortin luku ei onnistunut -> drivingLicenceFailed.wav
+Avaimen luku ei onnistunut -> keyReadFailed.wav
