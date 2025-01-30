@@ -26,8 +26,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>340</y>
+      <x>40</x>
+      <y>370</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -54,14 +54,14 @@ color: rgb(32, 75, 70);</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="keyReturnBarcodeLineEdit">
+   <widget class="QLineEdit" name="keyBarcodeLineEdit">
     <property name="enabled">
      <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>340</y>
+      <x>440</x>
+      <y>360</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -87,10 +87,10 @@ color: rgb(32, 75, 70);</string>
    <widget class="QPushButton" name="takeCarPushButton">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>70</x>
       <y>0</y>
-      <width>171</width>
-      <height>101</height>
+      <width>201</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
@@ -110,7 +110,8 @@ color: rgb(32, 75, 70);</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(140, 51, 85);</string>
+background-color: rgb(140, 51, 85);
+</string>
     </property>
     <property name="text">
      <string>LAINAA</string>
@@ -132,8 +133,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>180</y>
+      <x>450</x>
+      <y>170</y>
       <width>201</width>
       <height>141</height>
      </rect>
@@ -200,10 +201,10 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QPushButton" name="returnCarPushButton">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>290</x>
       <y>0</y>
-      <width>171</width>
-      <height>101</height>
+      <width>191</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
@@ -264,7 +265,7 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>460</x>
       <y>470</y>
       <width>111</width>
       <height>41</height>
@@ -285,8 +286,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QLabel" name="clockLabel">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>470</y>
+      <x>410</x>
+      <y>480</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -304,10 +305,10 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QPushButton" name="goBackPushButton">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>480</y>
-      <width>171</width>
-      <height>91</height>
+      <x>610</x>
+      <y>520</y>
+      <width>151</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="font">
@@ -321,7 +322,7 @@ background-color: rgb(140, 51, 85);</string>
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Palaa takaisin</string>
+     <string>KUMOA</string>
     </property>
     <property name="icon">
      <iconset resource="pictures.qrc">
@@ -350,8 +351,8 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>:/pictures/uiPictures/soundOn.png</normaloff>:/pictures/uiPictures/soundOn.png</iconset>
+     <iconset resource="pictures.qrc">
+      <normaloff>:/picture/uiPictures/soundOn.png</normaloff>:/picture/uiPictures/soundOn.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -390,7 +391,7 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>60</x>
-      <y>380</y>
+      <y>400</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -410,8 +411,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="carInfoLabel">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>380</y>
+      <x>440</x>
+      <y>400</y>
       <width>171</width>
       <height>31</height>
      </rect>
@@ -429,22 +430,23 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="statusLabel">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>120</y>
-      <width>241</width>
-      <height>71</height>
+      <x>220</x>
+      <y>110</y>
+      <width>291</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI</family>
-      <pointsize>24</pointsize>
+      <family>Segoe Print</family>
+      <pointsize>28</pointsize>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 24pt &quot;Segoe UI&quot;;
+font: 28pt &quot;Segoe Print&quot;;
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
@@ -454,8 +456,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="okPushButton">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>190</y>
+      <x>260</x>
+      <y>530</y>
       <width>171</width>
       <height>91</height>
      </rect>
@@ -482,6 +484,36 @@ color: rgb(255, 255, 255);</string>
       <width>32</width>
       <height>32</height>
      </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="keyReturnBarcodeLineEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>320</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 127);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+    <property name="placeholderText">
+     <string>Lue avain</string>
     </property>
    </widget>
   </widget>
