@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>754</width>
-    <height>600</height>
+    <width>800</width>
+    <height>724</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,8 +26,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>330</y>
+      <x>50</x>
+      <y>340</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -60,8 +60,8 @@ color: rgb(32, 75, 70);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>330</y>
+      <x>370</x>
+      <y>340</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -82,9 +82,6 @@ color: rgb(32, 75, 70);</string>
     </property>
     <property name="placeholderText">
      <string>Lue avain</string>
-    </property>
-    <property name="clearButtonEnabled">
-     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="takeCarPushButton">
@@ -119,8 +116,8 @@ background-color: rgb(140, 51, 85);</string>
      <string>LAINAA</string>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/ota.png</normaloff>:/pictures/uiPictures/ota.png</iconset>
+     <iconset resource="uiPicture/pictures.qrc">
+      <normaloff>:/uiPictures/ota.png</normaloff>:/uiPictures/ota.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -136,7 +133,7 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>330</x>
-      <y>160</y>
+      <y>180</y>
       <width>201</width>
       <height>141</height>
      </rect>
@@ -145,7 +142,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/keys.png</pixmap>
+     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/keys.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -157,8 +154,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>100</y>
+      <x>30</x>
+      <y>90</y>
       <width>211</width>
       <height>231</height>
      </rect>
@@ -170,7 +167,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/Teacher.png</pixmap>
+     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/Teacher.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
@@ -182,8 +179,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>400</y>
+      <x>70</x>
+      <y>470</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -232,8 +229,8 @@ background-color: rgb(140, 51, 85);</string>
      <string>PALAUTA</string>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/palauta.drawio.png</normaloff>:/pictures/uiPictures/palauta.drawio.png</iconset>
+     <iconset resource="uiPicture/pictures.qrc">
+      <normaloff>:/uiPictures/palauta.drawio.png</normaloff>:/uiPictures/palauta.drawio.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -245,8 +242,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QLabel" name="calendarLabel">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>400</y>
+      <x>30</x>
+      <y>460</y>
       <width>31</width>
       <height>51</height>
      </rect>
@@ -255,7 +252,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/calendar.png</pixmap>
+     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/calendar.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -267,8 +264,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>400</y>
+      <x>560</x>
+      <y>470</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -288,8 +285,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QLabel" name="clockLabel">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>400</y>
+      <x>510</x>
+      <y>470</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -298,7 +295,7 @@ background-color: rgb(140, 51, 85);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="userUiRescources.qrc">:/pictures/uiPictures/clock.png</pixmap>
+     <pixmap resource="uiPicture/pictures.qrc">:/uiPictures/clock.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -307,8 +304,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QPushButton" name="goBackPushButton">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>440</y>
+      <x>300</x>
+      <y>450</y>
       <width>171</width>
       <height>91</height>
      </rect>
@@ -327,8 +324,8 @@ color: rgb(255, 255, 255);</string>
      <string>Palaa takaisin</string>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/back.png</normaloff>:/pictures/uiPictures/back.png</iconset>
+     <iconset resource="uiPicture/pictures.qrc">
+      <normaloff>:/uiPictures/back.png</normaloff>:/uiPictures/back.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -353,7 +350,7 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
+     <iconset>
       <normaloff>:/pictures/uiPictures/soundOn.png</normaloff>:/pictures/uiPictures/soundOn.png</iconset>
     </property>
     <property name="iconSize">
@@ -379,8 +376,8 @@ color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/soundOff.png</normaloff>:/pictures/uiPictures/soundOff.png</iconset>
+     <iconset resource="uiPicture/pictures.qrc">
+      <normaloff>:/uiPictures/soundOff.png</normaloff>:/uiPictures/soundOff.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -389,37 +386,12 @@ color: rgb(255, 255, 255);</string>
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="statusLabel">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>10</y>
-      <width>441</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>36</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Tila</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="lenderNameLabel">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>360</y>
-      <width>181</width>
+      <x>60</x>
+      <y>380</y>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
@@ -438,36 +410,59 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="carInfoLabel">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>360</y>
-      <width>181</width>
+      <x>380</x>
+      <y>380</y>
+      <width>171</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>16</pointsize>
+      <stylestrategy>PreferAntialias</stylestrategy>
      </font>
     </property>
     <property name="text">
      <string>Merkki ja malli</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
+   </widget>
+   <widget class="QLabel" name="statusLabel">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>120</y>
+      <width>241</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>24</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 24pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Auton Lainaus</string>
     </property>
    </widget>
    <widget class="QPushButton" name="okPushButton">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>330</y>
+      <x>560</x>
+      <y>350</y>
       <width>171</width>
       <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>24</pointsize>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -476,7 +471,11 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>OK</string>
+     <string>Ok</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/pictures/uiPictures/back.png</normaloff>:/pictures/uiPictures/back.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -491,7 +490,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>754</width>
+     <width>800</width>
      <height>33</height>
     </rect>
    </property>
@@ -569,7 +568,7 @@ color: rgb(255, 255, 255);</string>
   </action>
  </widget>
  <resources>
-  <include location="userUiRescources.qrc"/>
+  <include location="uiPicture/pictures.qrc"/>
  </resources>
  <connections/>
 </ui>
