@@ -45,43 +45,43 @@ class Ui_MainWindow(object):
         self.lineEdit.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.pushButton = QPushButton(self.frame)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setGeometry(QRect(70, 350, 75, 41))
+        self.pushButton.setGeometry(QRect(60, 330, 101, 61))
         font1 = QFont()
         font1.setPointSize(16)
         font1.setBold(True)
         self.pushButton.setFont(font1)
-        self.pushButton.setStyleSheet(u"background-color: rgb(140, 51, 85);\n"
+        self.pushButton.setStyleSheet(u"background-color: rgb(255, 0, 255);\n"
 "color: rgb(255, 255, 255);")
         self.resetPositionsPushButton = QPushButton(self.centralwidget)
         self.resetPositionsPushButton.setObjectName(u"resetPositionsPushButton")
-        self.resetPositionsPushButton.setGeometry(QRect(370, 10, 101, 51))
+        self.resetPositionsPushButton.setGeometry(QRect(270, 100, 141, 71))
         self.resetPositionsPushButton.setFont(font1)
-        self.resetPositionsPushButton.setStyleSheet(u"background-color: rgb(0, 33, 72);\n"
+        self.resetPositionsPushButton.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
 "color: rgb(255, 255, 255);")
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(17, 440, 413, 58))
-        self.horizontalLayout = QHBoxLayout(self.widget)
+        self.layoutWidget = QWidget(self.centralwidget)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(17, 440, 413, 58))
+        self.horizontalLayout = QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.formLayout = QFormLayout()
         self.formLayout.setObjectName(u"formLayout")
-        self.lastNameLineEdit = QLineEdit(self.widget)
+        self.lastNameLineEdit = QLineEdit(self.layoutWidget)
         self.lastNameLineEdit.setObjectName(u"lastNameLineEdit")
 
         self.formLayout.setWidget(0, QFormLayout.LabelRole, self.lastNameLineEdit)
 
-        self.pushButton_2 = QPushButton(self.widget)
+        self.pushButton_2 = QPushButton(self.layoutWidget)
         self.pushButton_2.setObjectName(u"pushButton_2")
 
         self.formLayout.setWidget(0, QFormLayout.FieldRole, self.pushButton_2)
 
-        self.firstNameLineEdit = QLineEdit(self.widget)
+        self.firstNameLineEdit = QLineEdit(self.layoutWidget)
         self.firstNameLineEdit.setObjectName(u"firstNameLineEdit")
 
         self.formLayout.setWidget(1, QFormLayout.LabelRole, self.firstNameLineEdit)
 
-        self.pushButton_3 = QPushButton(self.widget)
+        self.pushButton_3 = QPushButton(self.layoutWidget)
         self.pushButton_3.setObjectName(u"pushButton_3")
 
         self.formLayout.setWidget(1, QFormLayout.FieldRole, self.pushButton_3)
@@ -89,7 +89,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addLayout(self.formLayout)
 
-        self.lastFocusPushButton = QPushButton(self.widget)
+        self.lastFocusPushButton = QPushButton(self.layoutWidget)
         self.lastFocusPushButton.setObjectName(u"lastFocusPushButton")
         self.lastFocusPushButton.setStyleSheet(u"background-color: rgb(220, 162, 25);")
 

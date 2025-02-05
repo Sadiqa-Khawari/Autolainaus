@@ -69,10 +69,10 @@
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>350</y>
-       <width>75</width>
-       <height>41</height>
+       <x>60</x>
+       <y>330</y>
+       <width>101</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -82,7 +82,7 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(140, 51, 85);
+      <string notr="true">background-color: rgb(255, 0, 255);
 color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
@@ -93,10 +93,10 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="resetPositionsPushButton">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>10</y>
-      <width>101</width>
-      <height>51</height>
+      <x>270</x>
+      <y>100</y>
+      <width>141</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
@@ -106,14 +106,14 @@ color: rgb(255, 255, 255);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(0, 33, 72);
+     <string notr="true">background-color: rgb(170, 85, 255);
 color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Palauta</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>17</x>
