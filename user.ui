@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>724</height>
+    <width>781</width>
+    <height>770</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,8 +26,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>370</y>
+      <x>50</x>
+      <y>350</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -60,8 +60,8 @@ color: rgb(32, 75, 70);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>360</y>
+      <x>430</x>
+      <y>350</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -180,8 +180,8 @@ background-color: rgb(140, 51, 85);
     </property>
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>470</y>
+      <x>70</x>
+      <y>450</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -244,7 +244,7 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>460</y>
+      <y>440</y>
       <width>31</width>
       <height>51</height>
      </rect>
@@ -265,8 +265,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>470</y>
+      <x>440</x>
+      <y>440</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -286,8 +286,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QLabel" name="clockLabel">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>480</y>
+      <x>400</x>
+      <y>450</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -306,7 +306,7 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>520</y>
+      <y>450</y>
       <width>151</width>
       <height>101</height>
      </rect>
@@ -390,7 +390,7 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="lenderNameLabel">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>70</x>
       <y>400</y>
       <width>151</width>
       <height>31</height>
@@ -411,7 +411,7 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="carInfoLabel">
     <property name="geometry">
      <rect>
-      <x>440</x>
+      <x>420</x>
       <y>400</y>
       <width>171</width>
       <height>31</height>
@@ -456,8 +456,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="okPushButton">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>530</y>
+      <x>600</x>
+      <y>350</y>
       <width>171</width>
       <height>91</height>
      </rect>
@@ -492,8 +492,8 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>320</y>
+      <x>430</x>
+      <y>350</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -516,13 +516,55 @@ color: rgb(255, 255, 255);</string>
      <string>Lue avain</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>510</y>
+      <width>191</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>uiPictures/auto.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>261</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="plainText">
+     <string>Vapaat ajaneuvot
+XSE-778 Toyota BZ4X 5 henkillöä
+XYZ-123 VW Transtporter 3 henkilöä</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>781</width>
      <height>33</height>
     </rect>
    </property>

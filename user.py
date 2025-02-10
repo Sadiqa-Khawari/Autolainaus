@@ -87,6 +87,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     
     # OHJELMOIDUT SLOTIT
     # ------------------
+  
 
     # Palauta käyttöliittymä alkutilanteeseen
     def setInitialElements(self):
@@ -128,6 +129,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     # Näyttää avaimen kuvakkeen, rekisterikenttä ja lainaajan tiedot
     def activateKey(self):
+        self.ui.ssnLineEdit.hide()
         self.ui.keyPictureLabel.show()
         self.ui.keyBarcodeLineEdit.show()
         self.ui.keyBarcodeLineEdit.setFocus()

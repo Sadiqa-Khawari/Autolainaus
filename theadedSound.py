@@ -48,15 +48,17 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     # onnistuu, Jos yritetään kutsua suoraan sound.playWav-metodia, sen suoritus
     # Jäädyttää käyttöliittumän. Tästä syystä on tehty erillinen slot, jota ei ku
     # suoraan vaan playWavFileThread slotin kautta.
+   
+    # Työfunktio, joka halutaan suorittaa säikeenä
     @Slot()
     def playWavFile(self):
-        sound.playWav("sounds\\readKey.WAV")
+        sound.playWav("sounds\\readKey.wav")
 
-    # Luodaan säie, joka suorittaa äänitiedoston soittamisen
+    # Luodaan uusi säie, joka kutsuu työfunktiota
     @Slot()
     def playWavFileThread(self):
         self.ui.carLineEdit.setFocus()
-        self.threadPool.start(self.playWavFile)   
+        self.threadPool.start(self.playWavFile) 
 
 
 # Luodaan sovellus
