@@ -16,16 +16,16 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
-    QMenu, QMenuBar, QPlainTextEdit, QPushButton,
-    QSizePolicy, QStatusBar, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
+    QMainWindow, QMenu, QMenuBar, QPlainTextEdit,
+    QPushButton, QSizePolicy, QStatusBar, QWidget)
 import pictures_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(781, 770)
+        MainWindow.resize(781, 885)
         icon = QIcon(QIcon.fromTheme(u"emblem-shared"))
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"background-color: rgb(223, 32, 112);")
@@ -207,13 +207,46 @@ class Ui_MainWindow(object):
         font7.setPointSize(20)
         self.label.setFont(font7)
         self.label.setPixmap(QPixmap(u"uiPictures/auto.png"))
-        self.plainTextEdit = QPlainTextEdit(self.centralwidget)
+        self.frame = QFrame(self.centralwidget)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(70, 210, 471, 331))
+        self.frame.setFrameShape(QFrame.Shape.Box)
+        self.frame.setFrameShadow(QFrame.Shadow.Plain)
+        self.frame.setLineWidth(4)
+        self.plainTextEdit = QPlainTextEdit(self.frame)
         self.plainTextEdit.setObjectName(u"plainTextEdit")
-        self.plainTextEdit.setGeometry(QRect(20, 530, 261, 161))
+        self.plainTextEdit.setGeometry(QRect(20, 60, 191, 171))
         font8 = QFont()
         font8.setPointSize(10)
         font8.setBold(False)
         self.plainTextEdit.setFont(font8)
+        self.plainTextEdit.setStyleSheet(u"border-color: rgb(255, 255, 255);")
+        self.plainTextEdit.setFrameShape(QFrame.Shape.NoFrame)
+        self.plainTextEdit.setFrameShadow(QFrame.Shadow.Plain)
+        self.plainTextEdit.setLineWidth(8)
+        self.plainTextEdit_2 = QPlainTextEdit(self.frame)
+        self.plainTextEdit_2.setObjectName(u"plainTextEdit_2")
+        self.plainTextEdit_2.setGeometry(QRect(250, 50, 201, 171))
+        self.plainTextEdit_2.setFont(font8)
+        self.plainTextEdit_2.setStyleSheet(u"border-color: rgb(255, 255, 255);")
+        self.plainTextEdit_2.setFrameShape(QFrame.Shape.NoFrame)
+        self.plainTextEdit_2.setFrameShadow(QFrame.Shadow.Plain)
+        self.plainTextEdit_2.setLineWidth(8)
+        self.line = QFrame(self.frame)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(220, 0, 20, 331))
+        self.line.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.line.setFrameShadow(QFrame.Shadow.Plain)
+        self.line.setLineWidth(3)
+        self.line.setFrameShape(QFrame.Shape.VLine)
+        self.availableLabel = QLabel(self.frame)
+        self.availableLabel.setObjectName(u"availableLabel")
+        self.availableLabel.setGeometry(QRect(50, 10, 101, 31))
+        self.availableLabel.setFont(font3)
+        self.availableLabel_2 = QLabel(self.frame)
+        self.availableLabel_2.setObjectName(u"availableLabel_2")
+        self.availableLabel_2.setGeometry(QRect(300, 20, 101, 31))
+        self.availableLabel_2.setFont(font3)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -290,6 +323,10 @@ class Ui_MainWindow(object):
         self.plainTextEdit.setPlainText(QCoreApplication.translate("MainWindow", u"Vapaat ajaneuvot\n"
 "XSE-778 Toyota BZ4X 5 henkill\u00f6\u00e4\n"
 "XYZ-123 VW Transtporter 3 henkil\u00f6\u00e4", None))
+        self.plainTextEdit_2.setPlainText(QCoreApplication.translate("MainWindow", u"Ajossa:\n"
+"XAm-15 Renault Megane 5 henkil\u00f6\u00e4", None))
+        self.availableLabel.setText(QCoreApplication.translate("MainWindow", u"VAPAANA", None))
+        self.availableLabel_2.setText(QCoreApplication.translate("MainWindow", u"AJOSSA", None))
         self.menuTiedosto.setTitle(QCoreApplication.translate("MainWindow", u"Tiedosto", None))
         self.menuEdelliset.setTitle(QCoreApplication.translate("MainWindow", u"Edelliset", None))
     # retranslateUi
