@@ -27,6 +27,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
 
+        self.threadpool = QThreadPool().globalInstance()
+
         # Luodaan käyttöliittymä konvertoidun tiedoston perusteella MainWindow:n ui-ominaisuudeksi. Tämä suojaa lopun MainWindow-olion ylikirjoitukselta, kun ui-tiedostoa päivitetään
         self.ui = Ui_MainWindow()
 
@@ -44,8 +46,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             # Puretaan salasana tietokantaoperaatioita varten  
             self.plainTextPassword = cipher.decryptString(self.currentSettings['password'])
         
+        # Jos asetustiedostoa ei onnistu, näytetään virheilmoitus
         except Exception as error:
-            self.openWarning()
+            title = "Tietokanta-asetusten luku ei onnistunut"
+            text = "Tietokanta-asetuksien avaaminen ja salasanan purku ei onnistunut"
+            detailedText = str(error)
+            self.openWarning(title, text, detailedText)
 
 
         # Äänet oletuksena käytössä
@@ -88,12 +94,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     
     # OHJELMOIDUT SLOTIT
     # ------------------
-   
+
+    # Soita parametrina annettu äänitiedosto (työfunktio)
+    @Slot(str)
+    def playSoundFile(self, soundFileName):
+        fileAndPath = "sounds\\" + soundFileName
+        sound.playWav(fileAndPath)
+
+
+    @Slot(str)
+    def playSoundInTread(self, soundFileName):
+        self.threadpool.start(lambda: self.playSoundFile(soundFileName))
+
 
     # Palauta käyttöliittymä alkutilanteeseen
     def setInitialElements(self):
         self.ui.returnCarPushButton.show()
         self.ui.takeCarPushButton.show()
+        self.ui.statusFrame.show()
         self.ui.okPushButton.hide()
         self.ui.calendarLabel.hide()
         self.ui.clockLabel.hide()
@@ -113,8 +131,41 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.lenderNameLabel.hide()
         self.ui.carInfoLabel.hide()
 
+        # Luetaan tietokanta-asetukset paikallisiin muuttujiin
+        dbSettings = self.currentSettings
+        plainTextPassword = self.plainTextPassword
+        dbSettings['password'] = plainTextPassword # Vaidetaan selväkieliseksi
+
+        try:
+            # Luodaan tietokantayhteys-olio
+            dbConnection = dbOperations.DbConnection(dbSettings)
+            freeVehicles = dbConnection.readAllColumnsFromTable("vapaana")
+            
+            # Määritellään vapaana olevien autojen tiedot
+            # avalablePlainTextEdite-elementtiin
+            availableVehiclesData = ''
+            text = ''
+            
+            for vehiclTtuple in freeVehicles:
+                rowData = ''
+                for vehicleData in vehiclTtuple:
+                    rowData += rowData + f'{vehicleData}'
+                text = rowData + 'henkilöä\n'
+                availableVehiclesData = availableVehiclesData + text
+
+            self.ui.avalablePlainTextEdite.setPlainText(availableVehiclesData)
+
+        except Exception as e:
+            title = 'Autotietojen lukuminen ei onnistutunut'
+            text = 'Vapaana autojen tiedot eivät ole saatavissa'
+            detailedText = str(e)
+            self.openWarning(title, text, detailedText)
+        # TODO: Lisää rutiini, joka hakee ajossa olevat autot
+
     # Näyttää lainaajan kuvakkeen ja henkilötunnuksen kentän
+    @Slot()
     def activateLender(self):
+        self.ui.statusFrame.hide()
         self.ui.statusLabel.setText('Auton lainaus')
         self.ui.lenderPictureLabel.show()
         self.ui.ssnLineEdit.show()
@@ -125,8 +176,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.ui.statusLabel.show()
         self.ui.statusbar.showMessage('Syötä ajokortti koneeseen')
         if self.soundOn:
-            sound.playWav('sounds\\drivingLicence.WAV')
-        
+            self.playSoundFile("drivingLicense.wav")        
 
     # Näyttää avaimen kuvakkeen, rekisterikenttä ja lainaajan tiedot
     def activateKey(self):
@@ -181,6 +231,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     # Näytetään palautukseen liittyvät kentät ja kuvat
     def activateReturnCar(self):
+        self.ui.statusFrame.hide()
         self.ui.takeCarPushButton.hide()
         self.ui.returnCarPushButton.hide()
         self.ui.statusLabel.setText('Auton palautus')

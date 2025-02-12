@@ -72,7 +72,8 @@ color: rgb(32, 75, 70);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 127);</string>
+     <string notr="true">background-color: rgb(255, 255, 127);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string/>
@@ -504,7 +505,8 @@ color: rgb(255, 255, 255);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 127);</string>
+     <string notr="true">background-color: rgb(255, 255, 127);
+color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
      <string/>
@@ -537,13 +539,13 @@ color: rgb(255, 255, 255);</string>
      <pixmap>uiPictures/auto.png</pixmap>
     </property>
    </widget>
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="statusFrame">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>210</y>
-      <width>471</width>
-      <height>331</height>
+      <x>40</x>
+      <y>130</y>
+      <width>531</width>
+      <height>401</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -555,13 +557,13 @@ color: rgb(255, 255, 255);</string>
     <property name="lineWidth">
      <number>4</number>
     </property>
-    <widget class="QPlainTextEdit" name="plainTextEdit">
+    <widget class="QPlainTextEdit" name="avalablePlainTextEdite">
      <property name="geometry">
       <rect>
        <x>20</x>
        <y>60</y>
-       <width>191</width>
-       <height>171</height>
+       <width>221</width>
+       <height>321</height>
       </rect>
      </property>
      <property name="font">
@@ -591,10 +593,10 @@ XYZ-123 VW Transtporter 3 henkilöä</string>
     <widget class="QPlainTextEdit" name="plainTextEdit_2">
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>50</y>
+       <x>300</x>
+       <y>60</y>
        <width>201</width>
-       <height>171</height>
+       <height>261</height>
       </rect>
      </property>
      <property name="font">
@@ -623,10 +625,10 @@ XAm-15 Renault Megane 5 henkilöä</string>
     <widget class="Line" name="line">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>250</x>
        <y>0</y>
        <width>20</width>
-       <height>331</height>
+       <height>401</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -661,11 +663,11 @@ XAm-15 Renault Megane 5 henkilöä</string>
       <string>VAPAANA</string>
      </property>
     </widget>
-    <widget class="QLabel" name="availableLabel_2">
+    <widget class="QLabel" name="inUseLabel">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>20</y>
+       <x>340</x>
+       <y>10</y>
        <width>101</width>
        <height>31</height>
       </rect>
