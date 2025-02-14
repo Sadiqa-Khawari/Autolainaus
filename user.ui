@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>754</width>
-    <height>600</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -95,7 +95,7 @@ color: rgb(32, 75, 70);</string>
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>241</width>
+      <width>371</width>
       <height>101</height>
      </rect>
     </property>
@@ -186,8 +186,8 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>400</y>
-      <width>191</width>
+      <y>460</y>
+      <width>221</width>
       <height>41</height>
      </rect>
     </property>
@@ -197,18 +197,18 @@ background-color: rgb(140, 51, 85);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:  rgb(0, 33, 72);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>15.3.2024</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="returnCarPushButton">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>440</x>
       <y>0</y>
-      <width>251</width>
+      <width>371</width>
       <height>101</height>
      </rect>
     </property>
@@ -249,7 +249,7 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>400</y>
+      <y>460</y>
       <width>31</width>
       <height>51</height>
      </rect>
@@ -270,8 +270,8 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>400</y>
+      <x>430</x>
+      <y>450</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -282,17 +282,17 @@ background-color: rgb(140, 51, 85);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:  rgb(0, 33, 72);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>10.05</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="clockLabel">
     <property name="geometry">
      <rect>
-      <x>370</x>
-      <y>400</y>
+      <x>380</x>
+      <y>450</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -310,7 +310,7 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QPushButton" name="goBackPushButton">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>840</x>
       <y>440</y>
       <width>171</width>
       <height>91</height>
@@ -321,6 +321,9 @@ background-color: rgb(140, 51, 85);</string>
       <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(140, 51, 85);
@@ -340,102 +343,22 @@ color: rgb(255, 255, 255);</string>
      </size>
     </property>
    </widget>
-   <widget class="QPushButton" name="soundOnPushButton">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>0</y>
-      <width>101</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Ottaa äänet käyttöön&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(140, 51, 85);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/soundOn.png</normaloff>:/pictures/uiPictures/soundOn.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>48</width>
-      <height>48</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="soundOffPushButton">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>0</y>
-      <width>101</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Vaimentaa äänet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/soundOff.png</normaloff>:/pictures/uiPictures/soundOff.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>56</width>
-      <height>56</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QLabel" name="statusLabel">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>20</y>
-      <width>441</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>36</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Tila</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="lenderNameLabel">
     <property name="geometry">
      <rect>
       <x>70</x>
       <y>360</y>
       <width>181</width>
-      <height>31</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Lainaajan nimi</string>
@@ -448,15 +371,18 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>360</y>
+      <y>370</y>
       <width>181</width>
-      <height>31</height>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Merkki ja malli</string>
@@ -468,8 +394,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QPushButton" name="okPushButton">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>330</y>
+      <x>840</x>
+      <y>340</y>
       <width>171</width>
       <height>91</height>
      </rect>
@@ -479,6 +405,9 @@ color: rgb(255, 255, 255);</string>
       <pointsize>24</pointsize>
       <bold>true</bold>
      </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Tallentaa tiedot ajopäiväkirjaan&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -534,8 +463,8 @@ color: rgb(255, 255, 255);</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>100</y>
-      <width>561</width>
+      <y>120</y>
+      <width>811</width>
       <height>391</height>
      </rect>
     </property>
@@ -553,13 +482,13 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>10</x>
        <y>50</y>
-       <width>251</width>
+       <width>361</width>
        <height>331</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>10</pointsize>
+       <pointsize>12</pointsize>
        <bold>true</bold>
       </font>
      </property>
@@ -593,15 +522,15 @@ XYZ-123 VW Transtporter 3 henkilöä</string>
     <widget class="QPlainTextEdit" name="inUsePlainTextEdit">
      <property name="geometry">
       <rect>
-       <x>300</x>
+       <x>440</x>
        <y>50</y>
-       <width>251</width>
+       <width>351</width>
        <height>331</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <pointsize>10</pointsize>
+       <pointsize>12</pointsize>
        <bold>true</bold>
       </font>
      </property>
@@ -625,7 +554,7 @@ border-color: rgb(255, 255, 255);</string>
     <widget class="Line" name="line">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>390</x>
        <y>50</y>
        <width>20</width>
        <height>321</height>
@@ -647,7 +576,7 @@ border-color: rgb(255, 255, 255);</string>
     <widget class="QLabel" name="availableLabel">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>110</x>
        <y>10</y>
        <width>131</width>
        <height>31</height>
@@ -672,7 +601,7 @@ border-color: rgb(255, 255, 255);</string>
     <widget class="QLabel" name="inUseLabel">
      <property name="geometry">
       <rect>
-       <x>340</x>
+       <x>550</x>
        <y>10</y>
        <width>131</width>
        <height>31</height>
@@ -695,17 +624,67 @@ border-color: rgb(255, 255, 255);</string>
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="playPushButton">
+   <widget class="QLabel" name="statusLabel">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>200</y>
-      <width>75</width>
-      <height>24</height>
+      <x>190</x>
+      <y>10</y>
+      <width>441</width>
+      <height>91</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>36</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string>Soita</string>
+     <string>Tila</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="soundCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>20</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset theme="audio-volume-medium"/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -714,7 +693,7 @@ border-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>754</width>
+     <width>1024</width>
      <height>33</height>
     </rect>
    </property>
