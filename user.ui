@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>768</height>
+    <width>1136</width>
+    <height>924</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -185,15 +185,15 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>460</y>
+      <x>100</x>
+      <y>610</y>
       <width>221</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>32</pointsize>
+      <pointsize>28</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -249,7 +249,7 @@ background-color: rgb(140, 51, 85);</string>
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>460</y>
+      <y>600</y>
       <width>31</width>
       <height>51</height>
      </rect>
@@ -270,15 +270,15 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>450</y>
+      <x>100</x>
+      <y>690</y>
       <width>111</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>32</pointsize>
+      <pointsize>28</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -291,8 +291,8 @@ background-color: rgb(140, 51, 85);</string>
    <widget class="QLabel" name="clockLabel">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>450</y>
+      <x>30</x>
+      <y>690</y>
       <width>41</width>
       <height>41</height>
      </rect>
@@ -378,7 +378,7 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>16</pointsize>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -462,8 +462,8 @@ color: rgb(255, 255, 255);</string>
    <widget class="QFrame" name="statusFrame">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>120</y>
+      <x>20</x>
+      <y>110</y>
       <width>811</width>
       <height>391</height>
      </rect>
@@ -522,8 +522,8 @@ XYZ-123 VW Transtporter 3 henkilöä</string>
     <widget class="QPlainTextEdit" name="inUsePlainTextEdit">
      <property name="geometry">
       <rect>
-       <x>440</x>
-       <y>50</y>
+       <x>430</x>
+       <y>60</y>
        <width>351</width>
        <height>331</height>
       </rect>
@@ -687,13 +687,37 @@ border-color: rgb(255, 255, 255);</string>
      </size>
     </property>
    </widget>
+   <widget class="QLabel" name="vehiclePictureLabel">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>540</y>
+      <width>381</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>uiPictures/OXZ915.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1024</width>
+     <width>1136</width>
      <height>33</height>
     </rect>
    </property>

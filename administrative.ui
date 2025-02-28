@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>585</height>
+    <width>832</width>
+    <height>751</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,8 +22,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>783</width>
-      <height>551</height>
+      <width>791</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="font">
@@ -32,10 +32,10 @@
      </font>
     </property>
     <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
+     <cursorShape>ArrowCursor</cursorShape>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="lenderTab">
      <property name="cursor">
@@ -54,7 +54,7 @@
        </rect>
       </property>
       <property name="cursor" stdset="0">
-       <cursorShape>ForbiddenCursor</cursorShape>
+       <cursorShape>ArrowCursor</cursorShape>
       </property>
       <property name="rowCount">
        <number>10</number>
@@ -278,9 +278,9 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>0</y>
+        <y>10</y>
         <width>101</width>
-        <height>151</height>
+        <height>231</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="vehicleLabelsVerticalLayout">
@@ -344,15 +344,29 @@ color: rgb(255, 255, 255);</string>
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QLabel" name="vehicleTypeLabel">
+         <property name="text">
+          <string>Ajoneuvotyyppi</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="vahicleOwnerLabel">
+         <property name="text">
+          <string>Vastuuhenkilö</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="layoutWidget_2">
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>0</y>
-        <width>169</width>
-        <height>156</height>
+        <y>12</y>
+        <width>171</width>
+        <height>231</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="vehicleInputsVerticalLayout">
@@ -363,6 +377,9 @@ color: rgb(255, 255, 255);</string>
            <pointsize>11</pointsize>
           </font>
          </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -371,6 +388,9 @@ color: rgb(255, 255, 255);</string>
           <font>
            <pointsize>11</pointsize>
           </font>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -381,6 +401,9 @@ color: rgb(255, 255, 255);</string>
            <pointsize>11</pointsize>
           </font>
          </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -389,6 +412,9 @@ color: rgb(255, 255, 255);</string>
           <font>
            <pointsize>11</pointsize>
           </font>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -399,6 +425,25 @@ color: rgb(255, 255, 255);</string>
            <pointsize>11</pointsize>
           </font>
          </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="vehicleTypeComboBox">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="vehicleOwnerLineEdit">
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
       </layout>
@@ -407,9 +452,9 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>120</y>
-        <width>91</width>
-        <height>23</height>
+        <y>200</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -433,9 +478,9 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>300</x>
-        <y>90</y>
-        <width>91</width>
-        <height>23</height>
+        <y>10</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -459,19 +504,25 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>190</y>
-        <width>601</width>
+        <y>250</y>
+        <width>721</width>
         <height>321</height>
        </rect>
       </property>
       <property name="cursor" stdset="0">
-       <cursorShape>ForbiddenCursor</cursorShape>
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
       </property>
       <property name="rowCount">
-       <number>10</number>
+       <number>99</number>
       </property>
       <property name="columnCount">
-       <number>5</number>
+       <number>8</number>
       </property>
       <row/>
       <row/>
@@ -483,6 +534,98 @@ color: rgb(255, 255, 255);</string>
       <row/>
       <row/>
       <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
       <column/>
       <column/>
       <column/>
@@ -492,14 +635,93 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="vehicleListLabel">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>170</y>
+        <x>630</x>
+        <y>230</y>
         <width>101</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
        <string>Autoluettelo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="openPicturePushButton">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>100</y>
+        <width>101</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string> </string>
+      </property>
+      <property name="icon">
+       <iconset theme="camera-photo"/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="vehiclePictureLabel">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>20</y>
+        <width>271</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Plain</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>uiPictures/noPicture.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="removeVehiclePushButton">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>60</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Poista</string>
       </property>
      </widget>
     </widget>
@@ -521,6 +743,9 @@ color: rgb(255, 255, 255);</string>
         <pointsize>10</pointsize>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(57, 136, 220);
@@ -863,7 +1088,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>832</width>
      <height>33</height>
     </rect>
    </property>
