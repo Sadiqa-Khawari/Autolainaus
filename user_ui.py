@@ -18,8 +18,8 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QFrame, QLabel,
     QLineEdit, QMainWindow, QMenu, QMenuBar,
-    QPlainTextEdit, QPushButton, QSizePolicy, QStatusBar,
-    QWidget)
+    QPlainTextEdit, QPushButton, QSizePolicy, QSlider,
+    QStatusBar, QWidget)
 import userUiRescources_rc
 
 class Ui_MainWindow(object):
@@ -239,7 +239,7 @@ class Ui_MainWindow(object):
         self.statusLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.soundCheckBox = QCheckBox(self.centralwidget)
         self.soundCheckBox.setObjectName(u"soundCheckBox")
-        self.soundCheckBox.setGeometry(QRect(870, 20, 81, 61))
+        self.soundCheckBox.setGeometry(QRect(940, 10, 81, 61))
         font9 = QFont()
         font9.setPointSize(9)
         self.soundCheckBox.setFont(font9)
@@ -253,10 +253,26 @@ class Ui_MainWindow(object):
         self.soundCheckBox.setIconSize(QSize(64, 64))
         self.vehiclePictureLabel = QLabel(self.centralwidget)
         self.vehiclePictureLabel.setObjectName(u"vehiclePictureLabel")
-        self.vehiclePictureLabel.setGeometry(QRect(330, 540, 381, 261))
+        self.vehiclePictureLabel.setGeometry(QRect(270, 520, 381, 251))
         self.vehiclePictureLabel.setFont(font2)
         self.vehiclePictureLabel.setPixmap(QPixmap(u"uiPictures/OXZ915.png"))
         self.vehiclePictureLabel.setScaledContents(True)
+        self.horizontalSlider = QSlider(self.centralwidget)
+        self.horizontalSlider.setObjectName(u"horizontalSlider")
+        self.horizontalSlider.setGeometry(QRect(950, 100, 61, 22))
+        self.horizontalSlider.setMaximum(1)
+        self.horizontalSlider.setPageStep(1)
+        self.horizontalSlider.setOrientation(Qt.Orientation.Horizontal)
+        self.label = QLabel(self.centralwidget)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(890, 80, 49, 61))
+        self.label.setPixmap(QPixmap(u"uiPictures/unmuted.png"))
+        self.label.setScaledContents(True)
+        self.label_2 = QLabel(self.centralwidget)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(1020, 80, 49, 61))
+        self.label_2.setPixmap(QPixmap(u"uiPictures/muted.png"))
+        self.label_2.setScaledContents(True)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -335,6 +351,8 @@ class Ui_MainWindow(object):
         self.statusLabel.setText(QCoreApplication.translate("MainWindow", u"Tila", None))
         self.soundCheckBox.setText("")
         self.vehiclePictureLabel.setText("")
+        self.label.setText("")
+        self.label_2.setText("")
         self.menuTiedosto.setTitle(QCoreApplication.translate("MainWindow", u"Tiedosto", None))
         self.menuEdelliset.setTitle(QCoreApplication.translate("MainWindow", u"Edelliset", None))
     # retranslateUi

@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="pictures">
+    <file>uiPictures/muted.png</file>
+    <file>uiPictures/unmuted.png</file>
     <file>uiPictures/soundOff.png</file>
     <file>uiPictures/soundOn.png</file>
     <file>uiPictures/back.png</file>
