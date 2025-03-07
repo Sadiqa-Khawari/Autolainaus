@@ -253,7 +253,7 @@ class Ui_MainWindow(object):
         self.soundCheckBox.setIconSize(QSize(64, 64))
         self.vehiclePictureLabel = QLabel(self.centralwidget)
         self.vehiclePictureLabel.setObjectName(u"vehiclePictureLabel")
-        self.vehiclePictureLabel.setGeometry(QRect(270, 520, 381, 251))
+        self.vehiclePictureLabel.setGeometry(QRect(270, 520, 381, 221))
         self.vehiclePictureLabel.setFont(font2)
         self.vehiclePictureLabel.setPixmap(QPixmap(u"uiPictures/OXZ915.png"))
         self.vehiclePictureLabel.setScaledContents(True)

@@ -121,10 +121,6 @@ background-color: rgb(140, 51, 85);</string>
     <property name="text">
      <string>LAINAA</string>
     </property>
-    <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/ota.png</normaloff>:/pictures/uiPictures/ota.png</iconset>
-    </property>
     <property name="iconSize">
      <size>
       <width>42</width>
@@ -233,10 +229,6 @@ background-color: rgb(140, 51, 85);</string>
     </property>
     <property name="text">
      <string>PALAUTA</string>
-    </property>
-    <property name="icon">
-     <iconset resource="userUiRescources.qrc">
-      <normaloff>:/pictures/uiPictures/palauta.drawio.png</normaloff>:/pictures/uiPictures/palauta.drawio.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -690,10 +682,10 @@ border-color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="vehiclePictureLabel">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>520</y>
-      <width>381</width>
-      <height>251</height>
+      <x>310</x>
+      <y>570</y>
+      <width>351</width>
+      <height>221</height>
      </rect>
     </property>
     <property name="font">
@@ -705,7 +697,7 @@ border-color: rgb(255, 255, 255);</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>uiPictures/OXZ915.png</pixmap>
+     <pixmap>uiPictures/defaultVehicles.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
